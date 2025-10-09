@@ -75,8 +75,11 @@ export default function PricingProposalPage() {
                         <p className="text-sm text-gray-600">
                           Initial website build, CMS setup, all integrations, content migration, testing, training
                         </p>
+                        <p className="text-xs text-green-600 mt-1 font-semibold">
+                          ✨ AI-optimised build process - savings passed to client
+                        </p>
                       </td>
-                      <td className="p-4 text-right font-semibold">£2,500</td>
+                      <td className="p-4 text-right font-semibold">£1,995</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
                       <td className="p-4">
@@ -91,7 +94,7 @@ export default function PricingProposalPage() {
                   <tfoot className="bg-primary text-white">
                     <tr>
                       <td className="p-4 font-bold text-lg">FIRST YEAR TOTAL (all-inclusive)</td>
-                      <td className="p-4 text-right font-bold text-2xl">£3,460</td>
+                      <td className="p-4 text-right font-bold text-2xl">£2,955</td>
                     </tr>
                     <tr className="bg-primary/90">
                       <td className="p-4 font-semibold">Annual Running Costs (Year 2 onwards)</td>
@@ -111,7 +114,7 @@ export default function PricingProposalPage() {
                   <div className="space-y-2 text-sm text-blue-800">
                     <div className="flex justify-between">
                       <span>Production (one-time):</span>
-                      <span className="font-semibold">£2,500</span>
+                      <span className="font-semibold">£1,995</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Hosting + Management (12 months @ £80/mo):</span>
@@ -119,13 +122,16 @@ export default function PricingProposalPage() {
                     </div>
                     <div className="border-t border-blue-300 pt-2 mt-2 flex justify-between font-bold text-lg">
                       <span>Total Year 1:</span>
-                      <span>£3,460</span>
+                      <span>£2,955</span>
                     </div>
                     <p className="text-xs mt-2 text-blue-700">
                       ✓ No VAT to add • ✓ No hidden fees • ✓ All-inclusive pricing
                     </p>
+                    <p className="text-xs mt-2 text-green-700 font-semibold">
+                      ✨ AI-optimised development - £500+ saving passed to you
+                    </p>
                     <p className="text-xs mt-2 text-blue-800 font-semibold">
-                      Payment: £750 deposit (30%) + £1,750 on completion (70%)
+                      Payment: £600 deposit (30%) + £1,395 on completion (70%)
                     </p>
                   </div>
                 </div>
@@ -244,7 +250,7 @@ export default function PricingProposalPage() {
         {/* What's Included */}
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle className="text-2xl">What's Included in Production (£2,500)</CardTitle>
+            <CardTitle className="text-2xl">What's Included in Production (£1,995)</CardTitle>
             <CardDescription>Comprehensive website build with all core requirements</CardDescription>
           </CardHeader>
           <CardContent>
@@ -524,12 +530,12 @@ export default function PricingProposalPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
                   <p className="text-sm text-blue-700 mb-1">Upon Contract Signing</p>
-                  <p className="text-2xl font-bold text-blue-900">£750</p>
+                  <p className="text-2xl font-bold text-blue-900">£600</p>
                   <p className="text-xs text-blue-600 mt-1">(30% deposit)</p>
                 </div>
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
                   <p className="text-sm text-green-700 mb-1">Upon Completion</p>
-                  <p className="text-2xl font-bold text-green-900">£1,750</p>
+                  <p className="text-2xl font-bold text-green-900">£1,395</p>
                   <p className="text-xs text-green-600 mt-1">(70% balance)</p>
                 </div>
                 <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
@@ -659,24 +665,24 @@ export default function PricingProposalPage() {
                 </div>
 
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-3">
-                  <h4 className="font-semibold text-sm text-blue-900 mb-2">Integration Options:</h4>
+                  <h4 className="font-semibold text-sm text-blue-900 mb-2">What's Included (£1,250):</h4>
                   <div className="space-y-2 text-sm text-blue-800">
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
                       <p>
-                        <strong>Standalone System:</strong> New user database managed entirely within website (£1,250)
+                        <strong>Standalone System:</strong> Complete user authentication with member profiles, permissions, and dashboard
                       </p>
                     </div>
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
                       <p>
-                        <strong>Silo Database Sync:</strong> Login using Silo credentials + sync member data (£2,500 - requires Silo API)
+                        <strong>Social Login Option:</strong> Add "Login with Google/Facebook" (+£250)
                       </p>
                     </div>
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
                       <p>
-                        <strong>Social Login:</strong> Add "Login with Google/Facebook" option (+£250)
+                        <strong>Silo Integration:</strong> See "Silo Member Database Integration" section below for pricing options (£0-1,000)
                       </p>
                     </div>
                   </div>
@@ -692,6 +698,90 @@ export default function PricingProposalPage() {
                     <li>• Personalized content increases return visits</li>
                     <li>• Easier membership renewal reminders</li>
                     <li>• Foundation for future community features (forums, photo sharing, etc.)</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Silo Database Integration */}
+              <div className="bg-white rounded-lg p-6 border-2 border-teal-200">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="font-bold text-lg text-teal-900 mb-2">Silo Member Database Integration</h3>
+                    <p className="text-sm text-gray-600 mb-3">
+                      Connect your existing Silo member database to the website for seamless member data management
+                    </p>
+                  </div>
+                  <Badge className="bg-teal-100 text-teal-800 text-lg px-4 py-2">From £0</Badge>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                  <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="font-semibold text-sm">Option 1: Simple Portal</h4>
+                      <Badge className="bg-green-600 text-white text-xs">Included</Badge>
+                    </div>
+                    <p className="text-xs text-gray-700 mb-2">
+                      Direct link/iframe to existing Silo member portal
+                    </p>
+                    <div className="bg-white rounded p-2 text-xs text-gray-600 border border-blue-200">
+                      <p className="font-semibold text-blue-900">✓ Instantly Accessible</p>
+                      <p className="mt-1">No additional development cost</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="font-semibold text-sm">Option 2: Read-Only Sync</h4>
+                      <Badge className="bg-green-700 text-white text-xs">£250-500</Badge>
+                    </div>
+                    <p className="text-xs text-gray-700 mb-2">
+                      Display member data on website via one-way sync
+                    </p>
+                    <div className="bg-white rounded p-2 text-xs text-gray-600 border border-green-200">
+                      <p className="font-semibold text-green-900">Requirements:</p>
+                      <p className="mt-1">• Silo API docs</p>
+                      <p>• Read-only access</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-purple-50 border-2 border-purple-200 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="font-semibold text-sm">Option 3: Bidirectional API</h4>
+                      <Badge className="bg-purple-700 text-white text-xs">£600-1,000</Badge>
+                    </div>
+                    <p className="text-xs text-gray-700 mb-2">
+                      Full two-way sync with automatic updates
+                    </p>
+                    <div className="bg-white rounded p-2 text-xs text-gray-600 border border-purple-200">
+                      <p className="font-semibold text-purple-900">⚠️ Pricing Note:</p>
+                      <p className="mt-1">Quote after API review</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-sm text-amber-900 mb-2">
+                    📋 What We Need to Provide Accurate Pricing
+                  </h4>
+                  <div className="space-y-1 text-sm text-amber-800">
+                    <p>• <strong>Silo API Documentation</strong> - Technical specifications and endpoints</p>
+                    <p>• <strong>API Access Credentials</strong> - Test environment access for development</p>
+                    <p>• <strong>Data Field Mapping</strong> - Which member fields to sync and display</p>
+                    <p className="text-xs italic mt-2">
+                      Note: Cannot price Options 2 & 3 accurately without reviewing Silo's API complexity and limitations
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-teal-50 border border-teal-200 rounded-lg p-4 mt-4">
+                  <p className="text-sm text-teal-900 mb-2">
+                    <strong>Recommendation:</strong> Start with Option 1 (included) for immediate functionality
+                  </p>
+                  <ul className="space-y-1 text-sm text-teal-800">
+                    <li>• No additional cost or development time</li>
+                    <li>• Members can access Silo portal directly from website</li>
+                    <li>• Can upgrade to Options 2 or 3 later once API documentation is available</li>
+                    <li>• Provides value immediately while avoiding rushed integration decisions</li>
                   </ul>
                 </div>
               </div>

@@ -1008,34 +1008,67 @@ function SiloIntegrationView() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-gray-50 rounded-lg p-4">
-              <h4 className="font-semibold text-sm mb-2 flex items-center gap-2">
-                <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">Option 1</span>
-                Simple Portal
-              </h4>
-              <p className="text-sm text-gray-600">
+            <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
+              <div className="flex items-center justify-between mb-2">
+                <h4 className="font-semibold text-sm flex items-center gap-2">
+                  <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">Option 1</span>
+                  Simple Portal
+                </h4>
+                <Badge className="bg-green-600">Included</Badge>
+              </div>
+              <p className="text-sm text-gray-700 mb-3">
                 Direct link/iframe to existing Silo member portal. Minimal technical integration, quick implementation.
               </p>
+              <div className="bg-white rounded p-2 text-xs text-gray-600 border border-blue-200">
+                <p className="font-semibold text-blue-900 mb-1">✓ Instantly Accessible</p>
+                <p>No additional development cost. Can be implemented immediately with Silo portal URL.</p>
+              </div>
             </div>
-            <div className="bg-gray-50 rounded-lg p-4">
-              <h4 className="font-semibold text-sm mb-2 flex items-center gap-2">
-                <span className="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Option 2</span>
-                Read-Only Sync
-              </h4>
-              <p className="text-sm text-gray-600">
+
+            <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
+              <div className="flex items-center justify-between mb-2">
+                <h4 className="font-semibold text-sm flex items-center gap-2">
+                  <span className="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Option 2</span>
+                  Read-Only Sync
+                </h4>
+                <Badge className="bg-green-700">£250-500</Badge>
+              </div>
+              <p className="text-sm text-gray-700 mb-3">
                 Display member data on website (directory, stats). Data flows one-way from Silo to website via scheduled sync.
               </p>
+              <div className="bg-white rounded p-2 text-xs text-gray-600 border border-green-200">
+                <p className="font-semibold text-green-900 mb-1">Requirements:</p>
+                <p>• Silo API documentation</p>
+                <p>• Read-only API access</p>
+                <p>• Data field mapping specification</p>
+              </div>
             </div>
-            <div className="bg-gray-50 rounded-lg p-4">
-              <h4 className="font-semibold text-sm mb-2 flex items-center gap-2">
-                <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Option 3</span>
-                Bidirectional API
-              </h4>
-              <p className="text-sm text-gray-600">
+
+            <div className="bg-purple-50 border-2 border-purple-200 rounded-lg p-4">
+              <div className="flex items-center justify-between mb-2">
+                <h4 className="font-semibold text-sm flex items-center gap-2">
+                  <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Option 3</span>
+                  Bidirectional API
+                </h4>
+                <Badge className="bg-purple-700">£600-1,000</Badge>
+              </div>
+              <p className="text-sm text-gray-700 mb-3">
                 Full two-way sync. Website registrations auto-update Silo. Complex but most integrated experience.
               </p>
+              <div className="bg-white rounded p-2 text-xs text-gray-600 border border-purple-200">
+                <p className="font-semibold text-purple-900 mb-1">⚠️ Cannot Price Accurately</p>
+                <p>Final cost depends on API complexity. Quote provided after reviewing Silo API documentation.</p>
+              </div>
             </div>
           </div>
+
+          <Alert className="bg-amber-50 border-amber-200">
+            <Info className="h-4 w-4 text-amber-600" />
+            <AlertDescription className="text-sm text-amber-900">
+              <strong>Recommendation:</strong> Start with Option 1 (included) for immediate functionality.
+              Options 2 & 3 can be added later once we have Silo API documentation and can provide accurate implementation quotes.
+            </AlertDescription>
+          </Alert>
         </CardContent>
       </Card>
 

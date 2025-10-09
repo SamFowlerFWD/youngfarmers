@@ -38,6 +38,27 @@ export default function TenderSubmissionPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* TL;DR Quick Link */}
+        <div className="mb-8 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg p-6 shadow-lg">
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-2xl font-bold mb-2">⚡ Short on Time?</h2>
+              <p className="text-white/90 mb-4">Get all the essential information in under 2 minutes</p>
+              <Link href="/tender/tldr">
+                <Button className="bg-white text-primary hover:bg-white/90 font-semibold">
+                  View Quick Summary (TL;DR) →
+                </Button>
+              </Link>
+            </div>
+            <div className="hidden md:block text-right">
+              <p className="text-3xl font-bold">£2,955</p>
+              <p className="text-white/90 text-sm">Year 1 Total</p>
+              <p className="text-white/90 text-sm mt-2">12 weeks delivery</p>
+              <p className="text-white/90 text-xs mt-1">✨ AI-optimised</p>
+            </div>
+          </div>
+        </div>
+
         {/* Executive Summary */}
         <Card className="mb-8 border-2 border-primary/20">
           <CardHeader>
@@ -424,7 +445,7 @@ export default function TenderSubmissionPage() {
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-gray-700">Production:</span>
-                    <span className="font-semibold">£2,500</span>
+                    <span className="font-semibold">£1,995</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-700">Hosting + Management:</span>
@@ -432,10 +453,10 @@ export default function TenderSubmissionPage() {
                   </div>
                   <div className="border-t-2 border-green-300 pt-2 flex justify-between">
                     <span className="font-bold text-green-900">Year 1 Total:</span>
-                    <span className="font-bold text-green-900 text-lg">£3,460</span>
+                    <span className="font-bold text-green-900 text-lg">£2,955</span>
                   </div>
                   <p className="text-xs text-green-700 pt-1">✓ No VAT to add</p>
-                  <p className="text-xs text-green-700">✓ GDPR compliant hosting</p>
+                  <p className="text-xs text-green-700">✓ AI-optimised development</p>
                 </div>
               </div>
 
@@ -620,8 +641,8 @@ export default function TenderSubmissionPage() {
                       <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </h3>
                     <p className="text-sm text-gray-600 mb-3">
-                      Complete cost breakdown in RFQ format: £3,460 Year 1 (£2,500 production + £960 hosting/management).
-                      No VAT. GDPR-compliant managed hosting. Timeline Nov 2025 → Mid-Feb 2026.
+                      Complete cost breakdown in RFQ format: £2,955 Year 1 (£1,995 production + £960 hosting/management).
+                      No VAT. AI-optimised development. GDPR-compliant managed hosting. Timeline Nov 2025 → Mid-Feb 2026.
                     </p>
                     <div className="flex items-center justify-between">
                       <Badge className="bg-green-100 text-green-800">25% of Evaluation</Badge>
