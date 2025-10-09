@@ -1110,6 +1110,13 @@ export default function PricingProposalPage() {
                   Your members and their families can also earn commission by referring local businesses, while those businesses
                   receive a discount. Everyone wins.
                 </p>
+                <Alert className="mb-4 bg-blue-50 border-blue-200">
+                  <Info className="h-4 w-4 text-blue-600" />
+                  <AlertDescription className="text-xs text-blue-900">
+                    <strong>Note:</strong> Prices shown below are example figures for illustration. Actual project costs vary based
+                    on requirements, complexity, and scope. Each referral receives a custom quote.
+                  </AlertDescription>
+                </Alert>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-purple-50 rounded-lg p-4 border border-purple-200">
                     <h4 className="font-semibold text-purple-900 mb-2 flex items-center gap-2">
@@ -1120,7 +1127,7 @@ export default function PricingProposalPage() {
                       <strong>Norfolk YFC receives 25% commission</strong> when you refer another county YFC federation or regional organisation
                     </p>
                     <p className="text-xs text-purple-700 italic">
-                      Example: Suffolk YFC builds same system → Norfolk YFC earns £498.75
+                      Example: Suffolk YFC at £2,495 → Norfolk YFC earns £623.75
                     </p>
                   </div>
                   <div className="bg-pink-50 rounded-lg p-4 border border-pink-200">
@@ -1132,7 +1139,7 @@ export default function PricingProposalPage() {
                       <strong>Norfolk YFC receives 10% commission + Referral gets 10% discount</strong> when members refer local businesses
                     </p>
                     <p className="text-xs text-pink-700 italic">
-                      Example: Member refers farm shop → Norfolk YFC earns £199.50, business saves £199.50
+                      Example: Farm shop at £1,000 → Norfolk YFC earns £100, business saves £100
                     </p>
                   </div>
                 </div>
@@ -1166,43 +1173,49 @@ export default function PricingProposalPage() {
                   </div>
 
                   <div className="bg-purple-50 rounded-lg p-6 border-2 border-purple-200">
-                    <h4 className="font-semibold mb-3 text-purple-900">Financial Breakdown:</h4>
+                    <h4 className="font-semibold mb-3 text-purple-900">Financial Breakdown (Example):</h4>
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between items-center pb-2 border-b border-purple-200">
-                        <span className="text-gray-700">Production cost (base)</span>
-                        <span className="font-semibold">£1,995.00</span>
+                        <span className="text-gray-700">Example project cost</span>
+                        <span className="font-semibold">£2,495.00</span>
                       </div>
                       <div className="flex justify-between items-center pb-2 border-b border-purple-200">
                         <span className="text-gray-700">Norfolk YFC commission (25%)</span>
-                        <span className="font-bold text-purple-900 text-lg">£498.75</span>
+                        <span className="font-bold text-purple-900 text-lg">£623.75</span>
                       </div>
                       <div className="flex justify-between items-center pb-2 border-b border-purple-200">
                         <span className="text-gray-700">My fee (75%)</span>
-                        <span className="font-semibold">£1,496.25</span>
+                        <span className="font-semibold">£1,871.25</span>
                       </div>
                       <div className="flex justify-between items-center pt-2">
                         <span className="text-gray-700 font-medium">Referred organisation pays</span>
-                        <span className="font-bold">£1,995.00</span>
+                        <span className="font-bold">£2,495.00</span>
                       </div>
                     </div>
+                    <p className="text-xs text-purple-700 mt-3 italic">
+                      Note: Actual pricing varies by project scope. Each referral receives custom quote.
+                    </p>
                   </div>
 
                   <div className="bg-white rounded-lg p-4 border border-gray-200">
-                    <h4 className="font-semibold mb-3">Potential Annual Income Examples:</h4>
+                    <h4 className="font-semibold mb-3">Potential Annual Income Examples (Based on £2,495 avg project):</h4>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
                       <div className="bg-gray-50 rounded p-3 text-center">
-                        <p className="text-2xl font-bold text-purple-600 mb-1">£498.75</p>
+                        <p className="text-2xl font-bold text-purple-600 mb-1">£623.75</p>
                         <p className="text-xs text-gray-600">From 1 county YFC referral</p>
                       </div>
                       <div className="bg-gray-50 rounded p-3 text-center">
-                        <p className="text-2xl font-bold text-purple-600 mb-1">£2,493.75</p>
+                        <p className="text-2xl font-bold text-purple-600 mb-1">£3,118.75</p>
                         <p className="text-xs text-gray-600">From 5 regional referrals</p>
                       </div>
                       <div className="bg-gray-50 rounded p-3 text-center">
-                        <p className="text-2xl font-bold text-purple-600 mb-1">£4,987.50</p>
+                        <p className="text-2xl font-bold text-purple-600 mb-1">£6,237.50</p>
                         <p className="text-xs text-gray-600">From 10 regional referrals</p>
                       </div>
                     </div>
+                    <p className="text-xs text-gray-600 mt-3 text-center italic">
+                      Examples only - actual commissions vary based on project pricing
+                    </p>
                   </div>
                 </div>
               </div>
@@ -1235,55 +1248,58 @@ export default function PricingProposalPage() {
                   </div>
 
                   <div className="bg-pink-50 rounded-lg p-6 border-2 border-pink-200">
-                    <h4 className="font-semibold mb-3 text-pink-900">Financial Breakdown:</h4>
+                    <h4 className="font-semibold mb-3 text-pink-900">Financial Breakdown (Example):</h4>
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between items-center pb-2 border-b border-pink-200">
-                        <span className="text-gray-700">Production cost (base)</span>
-                        <span className="font-semibold">£1,995.00</span>
+                        <span className="text-gray-700">Example project cost</span>
+                        <span className="font-semibold">£1,000.00</span>
                       </div>
                       <div className="flex justify-between items-center pb-2 border-b border-pink-200">
                         <span className="text-gray-700">Discount for referred business (10%)</span>
-                        <span className="font-semibold text-green-600">-£199.50</span>
+                        <span className="font-semibold text-green-600">-£100.00</span>
                       </div>
                       <div className="flex justify-between items-center pb-2 border-b border-pink-200">
                         <span className="text-gray-700">Referred business pays</span>
-                        <span className="font-bold">£1,795.50</span>
+                        <span className="font-bold">£900.00</span>
                       </div>
                       <div className="flex justify-between items-center pb-2 border-b border-pink-200">
                         <span className="text-gray-700">Norfolk YFC commission (10% of base)</span>
-                        <span className="font-bold text-pink-900 text-lg">£199.50</span>
+                        <span className="font-bold text-pink-900 text-lg">£100.00</span>
                       </div>
                       <div className="flex justify-between items-center pt-2">
                         <span className="text-gray-700 font-medium">My fee (after commission + discount)</span>
-                        <span className="font-semibold">£1,596.00</span>
+                        <span className="font-semibold">£800.00</span>
                       </div>
                     </div>
                     <div className="mt-4 p-3 bg-pink-100 rounded border border-pink-300">
                       <p className="text-xs text-pink-900">
-                        <strong>Win-Win-Win:</strong> Business saves £199.50, Norfolk YFC earns £199.50,
+                        <strong>Win-Win-Win:</strong> Business saves £100, Norfolk YFC earns £100,
                         I still receive fair compensation for quality work
                       </p>
                     </div>
+                    <p className="text-xs text-pink-700 mt-3 italic">
+                      Note: Actual pricing varies by project scope. Each referral receives custom quote.
+                    </p>
                   </div>
 
                   <div className="bg-white rounded-lg p-4 border border-gray-200">
-                    <h4 className="font-semibold mb-3">Norfolk YFC Income Potential from Member Referrals:</h4>
+                    <h4 className="font-semibold mb-3">Norfolk YFC Income Potential from Member Referrals (Based on £1,000 avg project):</h4>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
                       <div className="bg-gray-50 rounded p-3 text-center">
-                        <p className="text-2xl font-bold text-pink-600 mb-1">£199.50</p>
+                        <p className="text-2xl font-bold text-pink-600 mb-1">£100</p>
                         <p className="text-xs text-gray-600">From 1 business referral</p>
                       </div>
                       <div className="bg-gray-50 rounded p-3 text-center">
-                        <p className="text-2xl font-bold text-pink-600 mb-1">£997.50</p>
+                        <p className="text-2xl font-bold text-pink-600 mb-1">£500</p>
                         <p className="text-xs text-gray-600">From 5 business referrals</p>
                       </div>
                       <div className="bg-gray-50 rounded p-3 text-center">
-                        <p className="text-2xl font-bold text-pink-600 mb-1">£1,995.00</p>
+                        <p className="text-2xl font-bold text-pink-600 mb-1">£1,000</p>
                         <p className="text-xs text-gray-600">From 10 business referrals</p>
                       </div>
                     </div>
                     <p className="text-xs text-gray-600 mt-3 text-center italic">
-                      Payments made to Norfolk YFC organisation quarterly by bank transfer after successful project completion
+                      Examples only - actual commissions vary based on project pricing. Payments made to Norfolk YFC organisation quarterly.
                     </p>
                   </div>
                 </div>
@@ -1351,7 +1367,7 @@ export default function PricingProposalPage() {
                     <ul className="space-y-1 ml-4 text-xs">
                       <li>• Must be first point of contact with referred organisation</li>
                       <li>• Referred project must be completed and paid in full</li>
-                      <li>• Production value minimum £1,000 to qualify</li>
+                      <li>• Production value minimum £500 to qualify for commission</li>
                       <li>• Cannot combine with other discounts or offers</li>
                       <li>• Commission applies to production costs only (not hosting)</li>
                     </ul>

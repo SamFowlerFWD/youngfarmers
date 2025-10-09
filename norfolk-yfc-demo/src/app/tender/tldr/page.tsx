@@ -347,19 +347,20 @@ export default function TLDRPage() {
             <h3 className="font-bold text-purple-900 mb-3 flex items-center gap-2">
               🎁 Bonus: Referral Programme - Generate Income for Norfolk YFC & Members
             </h3>
+            <p className="text-xs text-gray-600 mb-2 italic">Example pricing - actual project costs vary by scope</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
               <div className="bg-white rounded-lg p-3 border border-purple-200">
                 <p className="font-semibold text-purple-900 text-sm mb-1">Regional Referrals (25%)</p>
                 <p className="text-xs text-gray-700">
-                  Norfolk YFC earns <strong>£498.75 per county federation</strong> referred.
-                  Refer 5 regions = £2,493.75 passive income.
+                  Norfolk YFC earns <strong>£623.75 per county federation</strong> referred (based on £2,495 example).
+                  Refer 5 regions = £3,118.75 passive income.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-3 border border-pink-200">
                 <p className="font-semibold text-pink-900 text-sm mb-1">Member Referrals (10% + 10%)</p>
                 <p className="text-xs text-gray-700">
-                  Norfolk YFC earns <strong>£199.50 per business</strong> referral from members.
-                  Referred business saves £199.50. Win-win-win.
+                  Norfolk YFC earns <strong>£100 per business</strong> referral from members (based on £1,000 example).
+                  Referred business saves £100. Win-win-win.
                 </p>
               </div>
             </div>

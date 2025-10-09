@@ -752,19 +752,20 @@ export default function TenderSubmissionPage() {
               <p className="text-sm text-purple-800 mb-3">
                 This partnership creates revenue opportunities beyond your own website:
               </p>
+              <p className="text-xs text-gray-600 mb-2 italic">Example pricing shown below - actual project costs vary by scope</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
                 <div className="bg-white rounded-lg p-3 border border-purple-200">
                   <p className="font-semibold text-purple-900 text-sm mb-1">🎯 Regional Referrals (25%)</p>
                   <p className="text-xs text-gray-700">
-                    Norfolk YFC earns <strong>£498.75</strong> commission when you refer other county YFC federations.
-                    Example: Refer Suffolk YFC, Cambridgeshire YFC, Essex YFC → earn <strong>£1,496.25</strong> passive income.
+                    Norfolk YFC earns <strong>£623.75</strong> commission per referral (example based on £2,495 project).
+                    Example: 3 county federations → earn <strong>£1,871.25</strong> passive income.
                   </p>
                 </div>
                 <div className="bg-white rounded-lg p-3 border border-pink-200">
                   <p className="font-semibold text-pink-900 text-sm mb-1">💰 Member Referrals (10% + 10%)</p>
                   <p className="text-xs text-gray-700">
-                    Norfolk YFC earns <strong>£199.50</strong> commission per business referral from members, while the referred business
-                    saves <strong>£199.50</strong> (10% discount). Win-win for everyone.
+                    Norfolk YFC earns <strong>£100</strong> commission per business referral from members (example based on £1,000 project),
+                    while the referred business saves <strong>£100</strong> (10% discount). Win-win for everyone.
                   </p>
                 </div>
               </div>
