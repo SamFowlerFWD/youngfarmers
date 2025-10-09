@@ -48,13 +48,13 @@ export default function RequirementsMatrixPage() {
                       <span className="font-medium">Accessibility (WCAG A)</span>
                     </td>
                     <td className="p-3">
-                      WCAG A compliant, semantic HTML, ARIA labels, keyboard navigation, screen reader optimized
+                      WCAG A compliant, semantic HTML, ARIA labels, keyboard navigation, screen reader optimized. Light/dark mode planned.
                     </td>
                     <td className="p-3 text-blue-600">
                       <a href="/" className="hover:underline">Demo site tested</a>
                     </td>
                     <td className="p-3 text-center">
-                      <Badge className="bg-green-100 text-green-800">✓ Complete</Badge>
+                      <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
@@ -107,10 +107,10 @@ export default function RequirementsMatrixPage() {
                       Mapbox integration, 11 senior clubs + 7 Countrysider groups, search, filters
                     </td>
                     <td className="p-3 text-blue-600">
-                      <a href="/clubs" className="hover:underline">See /clubs</a>
+                      <a href="/clubs" className="hover:underline">See /clubs (framework ready)</a>
                     </td>
                     <td className="p-3 text-center">
-                      <Badge className="bg-green-100 text-green-800">✓ Complete</Badge>
+                      <Badge className="bg-orange-100 text-orange-800">Needs integration</Badge>
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
