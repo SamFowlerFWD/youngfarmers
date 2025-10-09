@@ -283,11 +283,8 @@ export default function AboutPage() {
                   <h3 className="font-bold text-gray-900 mb-1">
                     {officer.name}
                   </h3>
-                  <p className="text-sm text-primary font-medium mb-3">
+                  <p className="text-sm text-primary font-medium">
                     {officer.role}
-                  </p>
-                  <p className="text-sm text-gray-600 line-clamp-3">
-                    {officer.bio}
                   </p>
                 </CardContent>
               </Card>
