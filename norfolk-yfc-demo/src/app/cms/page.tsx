@@ -29,40 +29,71 @@ import {
   CheckCircle2,
   AlertCircle,
   Briefcase,
+  Menu,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function CMSPage() {
   const [activeTab, setActiveTab] = useState("dashboard");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Mobile Menu Backdrop */}
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-30 lg:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+
       {/* CMS Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="h-10 w-10 bg-primary rounded-lg flex items-center justify-center">
-                <LayoutDashboard className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">Norfolk YFC CMS</h1>
-                <p className="text-sm text-gray-500">Content Management System</p>
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
+        <div className="px-4 sm:px-6 py-3 sm:py-4">
+          <div className="flex items-center justify-between gap-3">
+            {/* Left: Hamburger + Logo */}
+            <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+              {/* Hamburger Menu - Mobile Only */}
+              <Button
+                variant="ghost"
+                size="sm"
+                className="lg:hidden h-10 w-10 p-0"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                <Menu className="h-5 w-5" />
+              </Button>
+
+              <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                <div className="h-8 w-8 sm:h-10 sm:w-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <LayoutDashboard className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
+                </div>
+                <div className="min-w-0">
+                  <h1 className="text-base sm:text-xl font-bold text-gray-900 truncate">Norfolk YFC CMS</h1>
+                  <p className="text-xs sm:text-sm text-gray-500 hidden sm:block">Content Management System</p>
+                </div>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
+
+            {/* Right: Badges + User Info */}
+            <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+              {/* Live Badge - Hidden on very small screens */}
+              <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200 hidden sm:flex">
                 <span className="h-2 w-2 bg-green-500 rounded-full mr-2"></span>
                 Live Site
               </Badge>
-              <Button variant="outline" size="sm">
+
+              {/* Preview Button - Hidden on mobile */}
+              <Button variant="outline" size="sm" className="hidden md:flex">
                 <Eye className="h-4 w-4 mr-2" />
                 Preview Site
               </Button>
-              <div className="flex items-center gap-2 pl-3 border-l">
-                <div className="h-8 w-8 bg-primary/10 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-medium text-primary">JH</span>
+
+              {/* User Info */}
+              <div className="flex items-center gap-2 pl-2 sm:pl-3 border-l">
+                <div className="h-8 w-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-xs sm:text-sm font-medium text-primary">JH</span>
                 </div>
-                <div className="text-sm">
+                <div className="text-xs sm:text-sm hidden sm:block">
                   <p className="font-medium">Jen Hartley</p>
                   <p className="text-xs text-gray-500">County Organiser</p>
                 </div>
@@ -74,10 +105,32 @@ export default function CMSPage() {
 
       <div className="flex">
         {/* Sidebar Navigation */}
-        <aside className="w-64 bg-white border-r border-gray-200 min-h-[calc(100vh-73px)] sticky top-[73px]">
+        <aside
+          className={cn(
+            "w-64 bg-white border-r border-gray-200 min-h-[calc(100vh-65px)] sm:min-h-[calc(100vh-73px)]",
+            "lg:sticky lg:top-[65px] sm:lg:top-[73px]",
+            "fixed top-[65px] sm:top-[73px] left-0 z-40 transform transition-transform duration-300 ease-in-out",
+            mobileMenuOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+          )}
+        >
+          {/* Close button - Mobile only */}
+          <div className="lg:hidden flex justify-end p-2 border-b border-gray-200">
+            <Button
+              variant="ghost"
+              size="sm"
+              className="h-8 w-8 p-0"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <X className="h-4 w-4" />
+            </Button>
+          </div>
+
           <nav className="p-4 space-y-1">
             <button
-              onClick={() => setActiveTab("dashboard")}
+              onClick={() => {
+                setActiveTab("dashboard");
+                setMobileMenuOpen(false);
+              }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 activeTab === "dashboard"
                   ? "bg-primary text-white"
@@ -88,7 +141,10 @@ export default function CMSPage() {
               Dashboard
             </button>
             <button
-              onClick={() => setActiveTab("products")}
+              onClick={() => {
+                setActiveTab("products");
+                setMobileMenuOpen(false);
+              }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 activeTab === "products"
                   ? "bg-primary text-white"
@@ -99,7 +155,10 @@ export default function CMSPage() {
               Shop Products
             </button>
             <button
-              onClick={() => setActiveTab("news")}
+              onClick={() => {
+                setActiveTab("news");
+                setMobileMenuOpen(false);
+              }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 activeTab === "news"
                   ? "bg-primary text-white"
@@ -110,7 +169,10 @@ export default function CMSPage() {
               News & Blog
             </button>
             <button
-              onClick={() => setActiveTab("clubs")}
+              onClick={() => {
+                setActiveTab("clubs");
+                setMobileMenuOpen(false);
+              }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 activeTab === "clubs"
                   ? "bg-primary text-white"
@@ -121,7 +183,10 @@ export default function CMSPage() {
               Clubs
             </button>
             <button
-              onClick={() => setActiveTab("events")}
+              onClick={() => {
+                setActiveTab("events");
+                setMobileMenuOpen(false);
+              }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 activeTab === "events"
                   ? "bg-primary text-white"
@@ -132,7 +197,10 @@ export default function CMSPage() {
               Events
             </button>
             <button
-              onClick={() => setActiveTab("jobs")}
+              onClick={() => {
+                setActiveTab("jobs");
+                setMobileMenuOpen(false);
+              }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 activeTab === "jobs"
                   ? "bg-primary text-white"
@@ -143,7 +211,10 @@ export default function CMSPage() {
               Jobs Board
             </button>
             <button
-              onClick={() => setActiveTab("pages")}
+              onClick={() => {
+                setActiveTab("pages");
+                setMobileMenuOpen(false);
+              }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 activeTab === "pages"
                   ? "bg-primary text-white"
@@ -154,7 +225,10 @@ export default function CMSPage() {
               Pages
             </button>
             <button
-              onClick={() => setActiveTab("media")}
+              onClick={() => {
+                setActiveTab("media");
+                setMobileMenuOpen(false);
+              }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 activeTab === "media"
                   ? "bg-primary text-white"
@@ -166,7 +240,10 @@ export default function CMSPage() {
             </button>
             <div className="pt-4 mt-4 border-t border-gray-200">
               <button
-                onClick={() => setActiveTab("silo")}
+                onClick={() => {
+                  setActiveTab("silo");
+                  setMobileMenuOpen(false);
+                }}
                 className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   activeTab === "silo"
                     ? "bg-primary text-white"
@@ -179,7 +256,10 @@ export default function CMSPage() {
             </div>
             <div className="pt-4 mt-4 border-t border-gray-200">
               <button
-                onClick={() => setActiveTab("analytics")}
+                onClick={() => {
+                  setActiveTab("analytics");
+                  setMobileMenuOpen(false);
+                }}
                 className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   activeTab === "analytics"
                     ? "bg-primary text-white"
@@ -190,7 +270,10 @@ export default function CMSPage() {
                 Analytics
               </button>
               <button
-                onClick={() => setActiveTab("settings")}
+                onClick={() => {
+                  setActiveTab("settings");
+                  setMobileMenuOpen(false);
+                }}
                 className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   activeTab === "settings"
                     ? "bg-primary text-white"
@@ -205,14 +288,14 @@ export default function CMSPage() {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 p-8">
+        <main className="flex-1 p-4 sm:p-6 lg:p-8">
           {/* Demo Notice */}
-          <Alert className="bg-amber-50 border-amber-200 mb-8">
-            <Info className="h-4 w-4 text-amber-600" />
-            <AlertDescription className="text-amber-800">
+          <Alert className="bg-amber-50 border-amber-200 mb-6 sm:mb-8">
+            <Info className="h-4 w-4 text-amber-600 flex-shrink-0" />
+            <AlertDescription className="text-amber-800 text-xs sm:text-sm">
               <strong>Demo Interface:</strong> This is a visual mockup of the Content Management System (CMS) for demonstration purposes only.
               The actual production CMS will feature full functionality for managing all website content, products, events, clubs, and media.
-              This mockup demonstrates the user interface and workflow that Norfolk YFC staff would use to update the website.
+              <span className="hidden sm:inline"> This mockup demonstrates the user interface and workflow that Norfolk YFC staff would use to update the website.</span>
             </AlertDescription>
           </Alert>
 
@@ -236,10 +319,10 @@ export default function CMSPage() {
 // Dashboard View
 function DashboardView() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       <div>
-        <h2 className="text-2xl font-bold text-gray-900">Dashboard</h2>
-        <p className="text-gray-600">Welcome back! Here's an overview of your site.</p>
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Dashboard</h2>
+        <p className="text-sm sm:text-base text-gray-600">Welcome back! Here's an overview of your site.</p>
       </div>
 
       {/* Stats Grid */}
@@ -364,52 +447,60 @@ function ProductsView() {
   ];
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">Shop Products</h2>
-          <p className="text-gray-600">9 products • £12,840 total revenue this month</p>
+    <div className="space-y-4 sm:space-y-6">
+      <div className="flex items-center justify-between gap-3">
+        <div className="min-w-0">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Shop Products</h2>
+          <p className="text-xs sm:text-base text-gray-600 truncate">9 products • £12,840 total revenue this month</p>
         </div>
-        <Button>
-          <Plus className="h-4 w-4 mr-2" />
-          Add Product
+        <Button size="sm" className="flex-shrink-0">
+          <Plus className="h-4 w-4 sm:mr-2" />
+          <span className="hidden sm:inline">Add Product</span>
         </Button>
       </div>
 
-      <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-1 gap-3 sm:gap-4">
         {products.map((product, index) => (
           <Card key={index}>
-            <CardContent className="p-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4 flex-1">
-                  <div className="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <ShoppingBag className="h-6 w-6 text-green-600" />
+            <CardContent className="p-3 sm:p-4">
+              <div className="flex items-start sm:items-center justify-between gap-3">
+                <div className="flex items-start sm:items-center gap-3 flex-1 min-w-0">
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <ShoppingBag className="h-5 w-5 sm:h-6 sm:w-6 text-green-600" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h3 className="font-semibold">{product.name}</h3>
-                      <Badge variant="outline" className="bg-gray-50">{product.category}</Badge>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-1 sm:gap-2 mb-1">
+                      <h3 className="font-semibold text-sm sm:text-base truncate">{product.name}</h3>
+                      <Badge variant="outline" className="bg-gray-50 text-xs">{product.category}</Badge>
                       {product.stock.includes("Out of") ? (
-                        <Badge className="bg-red-100 text-red-800">Out of Stock</Badge>
+                        <Badge className="bg-red-100 text-red-800 text-xs">Out of Stock</Badge>
                       ) : product.stock.includes("Low") ? (
-                        <Badge className="bg-orange-100 text-orange-800">Low Stock</Badge>
+                        <Badge className="bg-orange-100 text-orange-800 text-xs">Low Stock</Badge>
                       ) : (
-                        <Badge className="bg-green-100 text-green-800">{product.status}</Badge>
+                        <Badge className="bg-green-100 text-green-800 text-xs">{product.status}</Badge>
                       )}
                     </div>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-xs sm:text-sm text-gray-600">
                       <span className="font-semibold text-primary">{product.price}</span> • {product.stock} • {product.sales} sales
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline">
+                <div className="flex gap-1 sm:gap-2 flex-shrink-0">
+                  {/* Desktop buttons */}
+                  <Button size="sm" variant="outline" className="hidden sm:flex">
                     <Eye className="h-4 w-4 mr-1" />
                     View
                   </Button>
-                  <Button size="sm" variant="outline">
+                  <Button size="sm" variant="outline" className="hidden sm:flex">
                     <Edit className="h-4 w-4 mr-1" />
                     Edit
+                  </Button>
+                  {/* Mobile icon-only buttons */}
+                  <Button size="sm" variant="outline" className="sm:hidden h-8 w-8 p-0">
+                    <Eye className="h-4 w-4" />
+                  </Button>
+                  <Button size="sm" variant="outline" className="sm:hidden h-8 w-8 p-0">
+                    <Edit className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
@@ -433,52 +524,61 @@ function NewsView() {
   ];
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">News & Blog</h2>
-          <p className="text-gray-600">6 articles • 4 published, 1 draft, 1 scheduled</p>
+    <div className="space-y-4 sm:space-y-6">
+      <div className="flex items-center justify-between gap-3">
+        <div className="min-w-0">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900">News & Blog</h2>
+          <p className="text-xs sm:text-base text-gray-600 truncate">6 articles • 4 published, 1 draft, 1 scheduled</p>
         </div>
-        <Button>
-          <Plus className="h-4 w-4 mr-2" />
-          New Article
+        <Button size="sm" className="flex-shrink-0">
+          <Plus className="h-4 w-4 sm:mr-2" />
+          <span className="hidden sm:inline">New Article</span>
         </Button>
       </div>
 
-      <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-1 gap-3 sm:gap-4">
         {articles.map((article, index) => (
           <Card key={index}>
-            <CardContent className="p-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4 flex-1">
-                  <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Newspaper className="h-6 w-6 text-blue-600" />
+            <CardContent className="p-3 sm:p-4">
+              <div className="flex items-start sm:items-center justify-between gap-3">
+                <div className="flex items-start sm:items-center gap-3 flex-1 min-w-0">
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Newspaper className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h3 className="font-semibold">{article.title}</h3>
-                      <Badge variant="outline" className={
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-1 sm:gap-2 mb-1">
+                      <h3 className="font-semibold text-sm sm:text-base truncate">{article.title}</h3>
+                      <Badge variant="outline" className={cn(
+                        "text-xs",
                         article.status === "Published" ? "bg-green-50 text-green-700" :
                         article.status === "Draft" ? "bg-yellow-50 text-yellow-700" :
                         "bg-blue-50 text-blue-700"
-                      }>
+                      )}>
                         {article.status}
                       </Badge>
-                      <Badge variant="outline">{article.category}</Badge>
+                      <Badge variant="outline" className="text-xs">{article.category}</Badge>
                     </div>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-xs sm:text-sm text-gray-600">
                       By {article.author} • {article.date}
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline">
+                <div className="flex gap-1 sm:gap-2 flex-shrink-0">
+                  {/* Desktop buttons */}
+                  <Button size="sm" variant="outline" className="hidden sm:flex">
                     <Eye className="h-4 w-4 mr-1" />
                     View
                   </Button>
-                  <Button size="sm" variant="outline">
+                  <Button size="sm" variant="outline" className="hidden sm:flex">
                     <Edit className="h-4 w-4 mr-1" />
                     Edit
+                  </Button>
+                  {/* Mobile icon-only buttons */}
+                  <Button size="sm" variant="outline" className="sm:hidden h-8 w-8 p-0">
+                    <Eye className="h-4 w-4" />
+                  </Button>
+                  <Button size="sm" variant="outline" className="sm:hidden h-8 w-8 p-0">
+                    <Edit className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
@@ -516,48 +616,59 @@ function ClubsView() {
   ];
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">Clubs</h2>
-          <p className="text-gray-600">18 clubs • 11 Senior + 7 Countrysiders</p>
+    <div className="space-y-4 sm:space-y-6">
+      <div className="flex items-center justify-between gap-3">
+        <div className="min-w-0">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Clubs</h2>
+          <p className="text-xs sm:text-base text-gray-600 truncate">18 clubs • 11 Senior + 7 Countrysiders</p>
         </div>
-        <Button>
-          <Plus className="h-4 w-4 mr-2" />
-          Add Club
+        <Button size="sm" className="flex-shrink-0">
+          <Plus className="h-4 w-4 sm:mr-2" />
+          <span className="hidden sm:inline">Add Club</span>
         </Button>
       </div>
 
-      <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-1 gap-3 sm:gap-4">
         {clubs.map((club, index) => (
           <Card key={index}>
-            <CardContent className="p-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4 flex-1">
-                  <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Users className="h-6 w-6 text-primary" />
+            <CardContent className="p-3 sm:p-4">
+              <div className="flex items-start sm:items-center justify-between gap-3">
+                <div className="flex items-start sm:items-center gap-3 flex-1 min-w-0">
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Users className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h3 className="font-semibold">{club.name}</h3>
-                      <Badge variant="outline" className={club.type === "Senior" ? "bg-blue-50 text-blue-700" : "bg-purple-50 text-purple-700"}>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-1 sm:gap-2 mb-1">
+                      <h3 className="font-semibold text-sm sm:text-base truncate">{club.name}</h3>
+                      <Badge variant="outline" className={cn(
+                        "text-xs",
+                        club.type === "Senior" ? "bg-blue-50 text-blue-700" : "bg-purple-50 text-purple-700"
+                      )}>
                         {club.type}
                       </Badge>
-                      <Badge className="bg-green-100 text-green-800">{club.status}</Badge>
+                      <Badge className="bg-green-100 text-green-800 text-xs">{club.status}</Badge>
                     </div>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-xs sm:text-sm text-gray-600">
                       <span className="font-medium">{club.members} members</span> • Contact: {club.contact}
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline">
+                <div className="flex gap-1 sm:gap-2 flex-shrink-0">
+                  {/* Desktop buttons */}
+                  <Button size="sm" variant="outline" className="hidden sm:flex">
                     <Eye className="h-4 w-4 mr-1" />
                     View
                   </Button>
-                  <Button size="sm" variant="outline">
+                  <Button size="sm" variant="outline" className="hidden sm:flex">
                     <Edit className="h-4 w-4 mr-1" />
                     Edit
+                  </Button>
+                  {/* Mobile icon-only buttons */}
+                  <Button size="sm" variant="outline" className="sm:hidden h-8 w-8 p-0">
+                    <Eye className="h-4 w-4" />
+                  </Button>
+                  <Button size="sm" variant="outline" className="sm:hidden h-8 w-8 p-0">
+                    <Edit className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
@@ -581,51 +692,60 @@ function EventsView() {
   ];
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">Events</h2>
-          <p className="text-gray-600">6 upcoming events • 692 total bookings</p>
+    <div className="space-y-4 sm:space-y-6">
+      <div className="flex items-center justify-between gap-3">
+        <div className="min-w-0">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Events</h2>
+          <p className="text-xs sm:text-base text-gray-600 truncate">6 upcoming events • 692 total bookings</p>
         </div>
-        <Button>
-          <Plus className="h-4 w-4 mr-2" />
-          Create Event
+        <Button size="sm" className="flex-shrink-0">
+          <Plus className="h-4 w-4 sm:mr-2" />
+          <span className="hidden sm:inline">Create Event</span>
         </Button>
       </div>
 
-      <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-1 gap-3 sm:gap-4">
         {events.map((event, index) => (
           <Card key={index}>
-            <CardContent className="p-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4 flex-1">
-                  <div className="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Calendar className="h-6 w-6 text-purple-600" />
+            <CardContent className="p-3 sm:p-4">
+              <div className="flex items-start sm:items-center justify-between gap-3">
+                <div className="flex items-start sm:items-center gap-3 flex-1 min-w-0">
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-purple-600" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h3 className="font-semibold">{event.title}</h3>
-                      <Badge className={
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-1 sm:gap-2 mb-1">
+                      <h3 className="font-semibold text-sm sm:text-base truncate">{event.title}</h3>
+                      <Badge className={cn(
+                        "text-xs",
                         event.status === "Sold Out" ? "bg-red-100 text-red-800" :
                         event.status === "Almost Full" ? "bg-orange-100 text-orange-800" :
                         "bg-green-100 text-green-800"
-                      }>
+                      )}>
                         {event.status}
                       </Badge>
                     </div>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-xs sm:text-sm text-gray-600">
                       {event.date} at {event.time} • {event.venue} • {event.capacity} tickets
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline">
+                <div className="flex gap-1 sm:gap-2 flex-shrink-0">
+                  {/* Desktop buttons */}
+                  <Button size="sm" variant="outline" className="hidden sm:flex">
                     <Eye className="h-4 w-4 mr-1" />
                     View
                   </Button>
-                  <Button size="sm" variant="outline">
+                  <Button size="sm" variant="outline" className="hidden sm:flex">
                     <Edit className="h-4 w-4 mr-1" />
                     Edit
+                  </Button>
+                  {/* Mobile icon-only buttons */}
+                  <Button size="sm" variant="outline" className="sm:hidden h-8 w-8 p-0">
+                    <Eye className="h-4 w-4" />
+                  </Button>
+                  <Button size="sm" variant="outline" className="sm:hidden h-8 w-8 p-0">
+                    <Edit className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
@@ -640,15 +760,15 @@ function EventsView() {
 // Jobs View
 function JobsView() {
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">Jobs Board</h2>
-          <p className="text-gray-600">Manage agricultural job listings and opportunities</p>
+    <div className="space-y-4 sm:space-y-6">
+      <div className="flex items-center justify-between gap-3">
+        <div className="min-w-0">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Jobs Board</h2>
+          <p className="text-xs sm:text-base text-gray-600">Manage agricultural job listings and opportunities</p>
         </div>
-        <Button>
-          <Plus className="h-4 w-4 mr-2" />
-          Post New Job
+        <Button size="sm" className="flex-shrink-0">
+          <Plus className="h-4 w-4 sm:mr-2" />
+          <span className="hidden sm:inline">Post New Job</span>
         </Button>
       </div>
 
@@ -751,15 +871,15 @@ function JobsView() {
 // Pages View
 function PagesView() {
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">Pages</h2>
-          <p className="text-gray-600">Manage static pages and content</p>
+    <div className="space-y-4 sm:space-y-6">
+      <div className="flex items-center justify-between gap-3">
+        <div className="min-w-0">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Pages</h2>
+          <p className="text-xs sm:text-base text-gray-600">Manage static pages and content</p>
         </div>
-        <Button>
-          <Plus className="h-4 w-4 mr-2" />
-          New Page
+        <Button size="sm" className="flex-shrink-0">
+          <Plus className="h-4 w-4 sm:mr-2" />
+          <span className="hidden sm:inline">New Page</span>
         </Button>
       </div>
 
@@ -790,15 +910,15 @@ function PagesView() {
 // Media View
 function MediaView() {
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">Media Library</h2>
-          <p className="text-gray-600">Upload and organize images, videos, and documents</p>
+    <div className="space-y-4 sm:space-y-6">
+      <div className="flex items-center justify-between gap-3">
+        <div className="min-w-0">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Media Library</h2>
+          <p className="text-xs sm:text-base text-gray-600">Upload and organize images, videos, and documents</p>
         </div>
-        <Button>
-          <Upload className="h-4 w-4 mr-2" />
-          Upload Files
+        <Button size="sm" className="flex-shrink-0">
+          <Upload className="h-4 w-4 sm:mr-2" />
+          <span className="hidden sm:inline">Upload Files</span>
         </Button>
       </div>
 
@@ -829,10 +949,10 @@ function MediaView() {
 // Analytics View
 function AnalyticsView() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       <div>
-        <h2 className="text-2xl font-bold text-gray-900">Analytics</h2>
-        <p className="text-gray-600">Track website performance and visitor insights</p>
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Analytics</h2>
+        <p className="text-xs sm:text-base text-gray-600">Track website performance and visitor insights</p>
       </div>
 
       <Card>
@@ -862,10 +982,10 @@ function AnalyticsView() {
 // Silo Integration View
 function SiloIntegrationView() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       <div>
-        <h2 className="text-2xl font-bold text-gray-900">Member Database Integration</h2>
-        <p className="text-gray-600">Silo API Integration Strategy & Capabilities</p>
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Member Database Integration</h2>
+        <p className="text-xs sm:text-base text-gray-600">Silo API Integration Strategy & Capabilities</p>
       </div>
 
       {/* Integration Status */}
@@ -1093,10 +1213,10 @@ function SiloIntegrationView() {
 // Settings View
 function SettingsView() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       <div>
-        <h2 className="text-2xl font-bold text-gray-900">Settings</h2>
-        <p className="text-gray-600">Configure your website and CMS preferences</p>
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Settings</h2>
+        <p className="text-xs sm:text-base text-gray-600">Configure your website and CMS preferences</p>
       </div>
 
       <Card>
