@@ -1090,6 +1090,349 @@ export default function PricingProposalPage() {
           </CardContent>
         </Card>
 
+        {/* Referral Program */}
+        <Card id="referral-programme" className="mb-8 border-2 border-purple-500/30 bg-gradient-to-br from-purple-50 to-pink-50 scroll-mt-24">
+          <CardHeader>
+            <CardTitle className="text-2xl flex items-center gap-2">
+              <Award className="h-6 w-6 text-purple-600" />
+              Referral Programme: Generate Income for Norfolk YFC
+            </CardTitle>
+            <CardDescription>
+              Earn commission by referring other regions and organisations to use this system
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-6">
+              {/* Introduction */}
+              <div className="bg-white rounded-lg p-6 border-2 border-purple-200">
+                <p className="text-gray-700 mb-4">
+                  Norfolk YFC can generate <strong>passive income</strong> by referring other county federations and organisations.
+                  Your members and their families can also earn commission by referring local businesses, while those businesses
+                  receive a discount. Everyone wins.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-purple-50 rounded-lg p-4 border border-purple-200">
+                    <h4 className="font-semibold text-purple-900 mb-2 flex items-center gap-2">
+                      <Target className="h-5 w-5" />
+                      Tier 1: Regional Referrals
+                    </h4>
+                    <p className="text-sm text-purple-800 mb-2">
+                      <strong>Norfolk YFC receives 25% commission</strong> when you refer another county YFC federation or regional organisation
+                    </p>
+                    <p className="text-xs text-purple-700 italic">
+                      Example: Suffolk YFC builds same system → Norfolk YFC earns £498.75
+                    </p>
+                  </div>
+                  <div className="bg-pink-50 rounded-lg p-4 border border-pink-200">
+                    <h4 className="font-semibold text-pink-900 mb-2 flex items-center gap-2">
+                      <Target className="h-5 w-5" />
+                      Tier 2: Member/Family Referrals
+                    </h4>
+                    <p className="text-sm text-pink-800 mb-2">
+                      <strong>Norfolk YFC receives 10% commission + Referral gets 10% discount</strong> when members refer local businesses
+                    </p>
+                    <p className="text-xs text-pink-700 italic">
+                      Example: Member refers farm shop → Norfolk YFC earns £199.50, business saves £199.50
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Tier 1: Regional Referrals */}
+              <div className="border-l-4 border-purple-500 pl-6">
+                <h3 className="text-xl font-bold mb-4 text-purple-900">Tier 1: Regional Referrals (25% Commission)</h3>
+
+                <div className="space-y-4">
+                  <div className="bg-white rounded-lg p-4 border border-gray-200">
+                    <h4 className="font-semibold mb-3">Who This Applies To:</h4>
+                    <ul className="space-y-2 text-sm text-gray-700">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                        <span>Other county YFC federations (Suffolk YFC, Essex YFC, Cambridgeshire YFC, etc.)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                        <span>Regional agricultural organisations and federations</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                        <span>Other youth agricultural groups nationwide</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                        <span>Similar membership-based charitable organisations</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-purple-50 rounded-lg p-6 border-2 border-purple-200">
+                    <h4 className="font-semibold mb-3 text-purple-900">Financial Breakdown:</h4>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex justify-between items-center pb-2 border-b border-purple-200">
+                        <span className="text-gray-700">Production cost (base)</span>
+                        <span className="font-semibold">£1,995.00</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-2 border-b border-purple-200">
+                        <span className="text-gray-700">Norfolk YFC commission (25%)</span>
+                        <span className="font-bold text-purple-900 text-lg">£498.75</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-2 border-b border-purple-200">
+                        <span className="text-gray-700">My fee (75%)</span>
+                        <span className="font-semibold">£1,496.25</span>
+                      </div>
+                      <div className="flex justify-between items-center pt-2">
+                        <span className="text-gray-700 font-medium">Referred organisation pays</span>
+                        <span className="font-bold">£1,995.00</span>
+                      </div>
+                    </div>
+                    <div className="mt-4 p-3 bg-purple-100 rounded border border-purple-300">
+                      <p className="text-xs text-purple-900">
+                        <strong>Plus ongoing:</strong> £80/month hosting generates long-term passive income for Norfolk YFC
+                        if organisations want to add hosting commission arrangements
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-lg p-4 border border-gray-200">
+                    <h4 className="font-semibold mb-3">Potential Annual Income Examples:</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                      <div className="bg-gray-50 rounded p-3 text-center">
+                        <p className="text-2xl font-bold text-purple-600 mb-1">£498.75</p>
+                        <p className="text-xs text-gray-600">From 1 county YFC referral</p>
+                      </div>
+                      <div className="bg-gray-50 rounded p-3 text-center">
+                        <p className="text-2xl font-bold text-purple-600 mb-1">£2,493.75</p>
+                        <p className="text-xs text-gray-600">From 5 regional referrals</p>
+                      </div>
+                      <div className="bg-gray-50 rounded p-3 text-center">
+                        <p className="text-2xl font-bold text-purple-600 mb-1">£4,987.50</p>
+                        <p className="text-xs text-gray-600">From 10 regional referrals</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Tier 2: Member/Family Referrals */}
+              <div className="border-l-4 border-pink-500 pl-6">
+                <h3 className="text-xl font-bold mb-4 text-pink-900">Tier 2: Member/Family Referrals (Norfolk YFC Earns 10% + Business Gets 10% Discount)</h3>
+
+                <div className="space-y-4">
+                  <div className="bg-white rounded-lg p-4 border border-gray-200">
+                    <h4 className="font-semibold mb-3">Who This Applies To:</h4>
+                    <ul className="space-y-2 text-sm text-gray-700">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-pink-600 mt-0.5 flex-shrink-0" />
+                        <span>Norfolk YFC members referring their own businesses (family farms, agricultural enterprises)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-pink-600 mt-0.5 flex-shrink-0" />
+                        <span>Member families referring local agricultural businesses</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-pink-600 mt-0.5 flex-shrink-0" />
+                        <span>Members referring local farm shops, rural businesses, agricultural suppliers</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-pink-600 mt-0.5 flex-shrink-0" />
+                        <span>Community organisations and local charities</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-pink-50 rounded-lg p-6 border-2 border-pink-200">
+                    <h4 className="font-semibold mb-3 text-pink-900">Financial Breakdown:</h4>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex justify-between items-center pb-2 border-b border-pink-200">
+                        <span className="text-gray-700">Production cost (base)</span>
+                        <span className="font-semibold">£1,995.00</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-2 border-b border-pink-200">
+                        <span className="text-gray-700">Discount for referred business (10%)</span>
+                        <span className="font-semibold text-green-600">-£199.50</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-2 border-b border-pink-200">
+                        <span className="text-gray-700">Referred business pays</span>
+                        <span className="font-bold">£1,795.50</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-2 border-b border-pink-200">
+                        <span className="text-gray-700">Norfolk YFC commission (10% of base)</span>
+                        <span className="font-bold text-pink-900 text-lg">£199.50</span>
+                      </div>
+                      <div className="flex justify-between items-center pt-2">
+                        <span className="text-gray-700 font-medium">My fee (after commission + discount)</span>
+                        <span className="font-semibold">£1,596.00</span>
+                      </div>
+                    </div>
+                    <div className="mt-4 p-3 bg-pink-100 rounded border border-pink-300">
+                      <p className="text-xs text-pink-900">
+                        <strong>Win-Win-Win:</strong> Business saves £199.50, Norfolk YFC earns £199.50,
+                        I still receive fair compensation for quality work
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-lg p-4 border border-gray-200">
+                    <h4 className="font-semibold mb-3">Norfolk YFC Income Potential from Member Referrals:</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                      <div className="bg-gray-50 rounded p-3 text-center">
+                        <p className="text-2xl font-bold text-pink-600 mb-1">£199.50</p>
+                        <p className="text-xs text-gray-600">From 1 business referral</p>
+                      </div>
+                      <div className="bg-gray-50 rounded p-3 text-center">
+                        <p className="text-2xl font-bold text-pink-600 mb-1">£997.50</p>
+                        <p className="text-xs text-gray-600">From 5 business referrals</p>
+                      </div>
+                      <div className="bg-gray-50 rounded p-3 text-center">
+                        <p className="text-2xl font-bold text-pink-600 mb-1">£1,995.00</p>
+                        <p className="text-xs text-gray-600">From 10 business referrals</p>
+                      </div>
+                    </div>
+                    <p className="text-xs text-gray-600 mt-3 text-center italic">
+                      Payments made to Norfolk YFC organisation quarterly by bank transfer after successful project completion
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* How It Works */}
+              <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-6 border-2 border-blue-200">
+                <h3 className="text-xl font-bold mb-4">How the Referral Programme Works:</h3>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  <div className="text-center">
+                    <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 border-2 border-blue-500">
+                      <span className="text-xl font-bold text-blue-600">1</span>
+                    </div>
+                    <h4 className="font-semibold text-sm mb-2">Make Introduction</h4>
+                    <p className="text-xs text-gray-600">
+                      Norfolk YFC or member introduces potential client via email/phone
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 border-2 border-green-500">
+                      <span className="text-xl font-bold text-green-600">2</span>
+                    </div>
+                    <h4 className="font-semibold text-sm mb-2">I Provide Quote</h4>
+                    <p className="text-xs text-gray-600">
+                      I assess requirements and provide detailed proposal with discount applied
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 border-2 border-purple-500">
+                      <span className="text-xl font-bold text-purple-600">3</span>
+                    </div>
+                    <h4 className="font-semibold text-sm mb-2">Project Delivered</h4>
+                    <p className="text-xs text-gray-600">
+                      Website built, tested, and launched successfully
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 border-2 border-orange-500">
+                      <span className="text-xl font-bold text-orange-600">4</span>
+                    </div>
+                    <h4 className="font-semibold text-sm mb-2">Commission Paid</h4>
+                    <p className="text-xs text-gray-600">
+                      Payment processed within 7 days of final invoice being paid
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Terms & Conditions */}
+              <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                <h3 className="text-lg font-bold mb-3">Referral Programme Terms:</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                  <div>
+                    <h4 className="font-semibold mb-2">Commission Payment:</h4>
+                    <ul className="space-y-1 ml-4 text-xs">
+                      <li>• Paid within 7 days of referred client's final invoice being settled</li>
+                      <li>• Paid via bank transfer (BACS)</li>
+                      <li>• All referral commissions (both tiers) paid to Norfolk YFC organisation</li>
+                      <li>• Norfolk YFC can choose to reward/recognize referring members internally</li>
+                      <li>• Quarterly statements provided for record-keeping</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Eligibility Requirements:</h4>
+                    <ul className="space-y-1 ml-4 text-xs">
+                      <li>• Must be first point of contact with referred organisation</li>
+                      <li>• Referred project must be completed and paid in full</li>
+                      <li>• Production value minimum £1,000 to qualify</li>
+                      <li>• Cannot combine with other discounts or offers</li>
+                      <li>• Commission applies to production costs only (not hosting)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Regional Referrals (25%):</h4>
+                    <ul className="space-y-1 ml-4 text-xs">
+                      <li>• Applies to county YFC federations nationwide</li>
+                      <li>• Applies to similar membership organisations</li>
+                      <li>• Can be structured as Norfolk YFC acts as reseller/partner</li>
+                      <li>• Optional ongoing hosting commission available</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Member Referrals (10% + 10%):</h4>
+                    <ul className="space-y-1 ml-4 text-xs">
+                      <li>• Member must be current Norfolk YFC member at time of referral</li>
+                      <li>• Referred business receives automatic 10% discount</li>
+                      <li>• Norfolk YFC receives 10% commission after completion</li>
+                      <li>• Multiple referrals encouraged - no limits</li>
+                    </ul>
+                  </div>
+                </div>
+                <Alert className="mt-4 bg-blue-50 border-blue-200">
+                  <Info className="h-4 w-4 text-blue-600" />
+                  <AlertDescription className="text-xs text-blue-900">
+                    <strong>Tax & Accounting:</strong> All commission payments made to Norfolk YFC organisation as
+                    organisational income. Norfolk YFC is responsible for declaring this income to HMRC. I provide
+                    detailed quarterly statements for your accounting records showing all referrals, commissions earned,
+                    and payment dates.
+                  </AlertDescription>
+                </Alert>
+              </div>
+
+              {/* Why This Benefits Everyone */}
+              <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg p-6 border-2 border-green-300">
+                <h3 className="text-lg font-bold mb-3 text-green-900">Why This Benefits Everyone:</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                  <div className="bg-white rounded-lg p-4">
+                    <h4 className="font-semibold text-green-900 mb-2">For Norfolk YFC:</h4>
+                    <ul className="space-y-1 text-xs text-gray-700">
+                      <li>✓ Generate passive income from regional referrals</li>
+                      <li>✓ Help other county federations improve their digital presence</li>
+                      <li>✓ Strengthen relationships within YFC network</li>
+                      <li>✓ Potential ongoing hosting commissions</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white rounded-lg p-4">
+                    <h4 className="font-semibold text-blue-900 mb-2">For Members:</h4>
+                    <ul className="space-y-1 text-xs text-gray-700">
+                      <li>✓ Help grow Norfolk YFC's income and capabilities</li>
+                      <li>✓ Support family farms and agricultural enterprises</li>
+                      <li>✓ Strengthen rural business community</li>
+                      <li>✓ Help businesses modernise while saving them money</li>
+                      <li>✓ Potential internal rewards/recognition from Norfolk YFC</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-900 mb-2">For Referred Businesses:</h4>
+                    <ul className="space-y-1 text-xs text-gray-700">
+                      <li>✓ Receive 10% discount on production costs</li>
+                      <li>✓ Work with proven developer with YFC experience</li>
+                      <li>✓ Support local agricultural community</li>
+                      <li>✓ Get quality website at below-market rate</li>
+                    </ul>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-700 mt-4 text-center">
+                  <strong>This programme turns Norfolk YFC's success into opportunities for the entire agricultural community</strong>
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Back to Tender */}
         <div className="mt-8 text-center">
           <Link

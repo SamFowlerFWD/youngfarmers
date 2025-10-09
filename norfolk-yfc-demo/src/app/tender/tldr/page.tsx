@@ -341,6 +341,37 @@ export default function TLDRPage() {
           </AlertDescription>
         </Alert>
 
+        {/* Referral Programme Bonus */}
+        <Alert className="mb-8 bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-300">
+          <AlertDescription>
+            <h3 className="font-bold text-purple-900 mb-3 flex items-center gap-2">
+              🎁 Bonus: Referral Programme - Generate Income for Norfolk YFC & Members
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+              <div className="bg-white rounded-lg p-3 border border-purple-200">
+                <p className="font-semibold text-purple-900 text-sm mb-1">Regional Referrals (25%)</p>
+                <p className="text-xs text-gray-700">
+                  Norfolk YFC earns <strong>£498.75 per county federation</strong> referred.
+                  Refer 5 regions = £2,493.75 passive income.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-3 border border-pink-200">
+                <p className="font-semibold text-pink-900 text-sm mb-1">Member Referrals (10% + 10%)</p>
+                <p className="text-xs text-gray-700">
+                  Norfolk YFC earns <strong>£199.50 per business</strong> referral from members.
+                  Referred business saves £199.50. Win-win-win.
+                </p>
+              </div>
+            </div>
+            <Link
+              href="/tender/pricing#referral-programme"
+              className="text-sm font-semibold text-purple-700 hover:text-purple-900 underline"
+            >
+              View full referral programme details →
+            </Link>
+          </AlertDescription>
+        </Alert>
+
         {/* Next Steps */}
         <Card className="border-2 border-primary">
           <CardHeader className="bg-primary/5">

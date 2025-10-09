@@ -742,6 +742,42 @@ export default function TenderSubmissionPage() {
           </CardContent>
         </Card>
 
+        {/* Referral Programme Highlight */}
+        <Alert className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-300">
+          <Award className="h-5 w-5 text-purple-600" />
+          <AlertDescription>
+            <div>
+              <p className="font-bold text-lg text-purple-900 mb-2">Bonus: Referral Programme - Generate Income for Norfolk YFC</p>
+              <p className="text-sm text-purple-800 mb-3">
+                This partnership creates revenue opportunities beyond your own website:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                <div className="bg-white rounded-lg p-3 border border-purple-200">
+                  <p className="font-semibold text-purple-900 text-sm mb-1">🎯 Regional Referrals (25%)</p>
+                  <p className="text-xs text-gray-700">
+                    Norfolk YFC earns <strong>£498.75</strong> commission when you refer other county YFC federations.
+                    Example: Refer Suffolk YFC, Cambridgeshire YFC, Essex YFC → earn <strong>£1,496.25</strong> passive income.
+                  </p>
+                </div>
+                <div className="bg-white rounded-lg p-3 border border-pink-200">
+                  <p className="font-semibold text-pink-900 text-sm mb-1">💰 Member Referrals (10% + 10%)</p>
+                  <p className="text-xs text-gray-700">
+                    Norfolk YFC earns <strong>£199.50</strong> commission per business referral from members, while the referred business
+                    saves <strong>£199.50</strong> (10% discount). Win-win for everyone.
+                  </p>
+                </div>
+              </div>
+              <Link
+                href="/tender/pricing#referral-programme"
+                className="text-sm font-semibold text-purple-700 hover:text-purple-900 underline inline-flex items-center gap-1"
+              >
+                View Full Referral Programme Details →
+                <ExternalLink className="h-3 w-3" />
+              </Link>
+            </div>
+          </AlertDescription>
+        </Alert>
+
         {/* Contact Information */}
         <Card className="bg-primary text-white">
           <CardHeader>
