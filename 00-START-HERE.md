@@ -12,6 +12,33 @@ Win the Norfolk FYFC website tender by building a compelling demo that shows you
 
 ---
 
+## ✅ SCRAPED ASSETS AVAILABLE
+
+**Successfully scraped from https://www.norfolkyfc.co.uk/ using Firecrawl:**
+
+📁 **Location**: `scraped-content/` folder
+
+**Downloaded Assets**:
+- Norfolk YFC logo (133KB PNG)
+- Hero image - young people at event (142KB JPG)
+- Event promotional image (29KB JPG)
+
+**Extracted Content**:
+- Homepage text and structure
+- Main taglines: "Do More, Be More with Norfolk YFC"
+- Value propositions and key messages
+- Contact information and office hours
+- Brand colors and visual style
+- Partner organization details
+
+**Complete Analysis**: See `scraped-content/ASSETS-AND-CONTENT-SUMMARY.md` for:
+- Brand color codes
+- Content themes and messaging
+- Design inspiration notes
+- What to recreate vs. enhance for demo
+
+---
+
 ## 📖 Read These 3 Files First (30 minutes)
 
 ### 1️⃣ This File (5 min)

@@ -97,23 +97,37 @@ PROJECT STRUCTURE:
 - Payload CMS integrated
 - PostgreSQL database
 
+IMPORTANT: Real assets available in scraped-content/ folder - see scraped-content/ASSETS-AND-CONTENT-SUMMARY.md
+
 REQUIREMENTS:
 1. Initialize Next.js project with TypeScript
-2. Configure Tailwind CSS with custom Norfolk YFC color palette:
-   - Primary: Vibrant green (#2B9348 or similar)
-   - Secondary: Bright blue (#1E88E5)
-   - Accent: Warm orange (#FF6F00)
-   - Neutral: Grays for text
+
+2. Configure Tailwind CSS with REAL Norfolk YFC brand colors (from logo):
+   - Primary Green: #2B7A3D (from logo) enhanced to #2B9348 for web
+   - Yellow/Gold: #F4C430 (from logo)
+   - Blue: #1E5BA8 (from logo) enhanced to #1E88E5 for web
+   - Accent Orange: #FF6F00 (modern, energetic)
+   - Neutrals: Grays for text
+
 3. Install and configure shadcn/ui
+
 4. Set up basic folder structure:
    - /app (pages)
    - /components (reusable components)
    - /lib (utilities)
    - /public (assets)
-5. Install Payload CMS dependencies
-6. Create .env.local template
+   - /public/images (copy assets from scraped-content/)
 
-Please provide complete package.json, tailwind.config.ts, and basic project structure.
+5. Copy assets from scraped-content/ to public/images/:
+   - norfolk-yfc-logo.png
+   - hero-image.jpg
+   - dinner-dance.jpg
+
+6. Install Payload CMS dependencies
+
+7. Create .env.local template
+
+Please provide complete package.json, tailwind.config.ts with real brand colors, and basic project structure.
 ```
 
 **Expected Output:**
@@ -185,24 +199,35 @@ Create all components in /components directory with TypeScript and proper props 
 ```
 Build the Norfolk FYFC homepage with the following sections:
 
+IMPORTANT: Use real assets and content from scraped-content/ folder.
+
 HOMEPAGE STRUCTURE:
 
 1. HERO SECTION:
-   - Full-width background image (young farmers in field/event)
+   - Full-width background image: USE scraped-content/hero-image.jpg
    - Overlay with gradient
-   - Main heading: "Norfolk Federation of Young Farmers Clubs"
-   - Subheading: "Led by young people, for young people"
+   - Main heading: "Do More, Be More with Norfolk YFC" (real tagline from current site)
+   - Subheading: "Want to do something new, interesting, fun and make friends? We have the clubs for you!"
    - Two CTA buttons: "Become a Member" and "Find Your Club"
    - Scroll indicator animation
 
 2. WELCOME SECTION:
-   - Brief introduction (2-3 paragraphs)
+   - Heading: "Welcome to Norfolk YFC"
+   - Subheading: "You don't have to be a Young Farmer to join Young Farmers!"
+   - USE real content from scraped-content/homepage.md bullet points:
+     * Are you aged between 10 and 28?
+     * Want to meet new people and make friends for life?
+     * Want never to be bored or short of things to do again?
+     * Want to travel the world?
+     * Want to learn new skills for work, leisure and life?
+     * Want to help others by raising money for charity?
+     * Want to have an influence on the local community?
    - Key stats in animated counters:
      * 500+ members
      * 10 senior clubs
      * 6 Countrysider groups
      * 75+ years of heritage
-   - "Learn More" button
+   - CTA: "Find Your Club"
 
 3. FEATURED EVENTS (carousel or grid):
    - Show 3 upcoming events
@@ -232,11 +257,18 @@ HOMEPAGE STRUCTURE:
    - Email input and subscribe button
    - Privacy notice
 
-8. INSTAGRAM FEED (mockup):
-   - Grid of 6 recent Instagram images
-   - "Follow Us" button
+8. PARTNER ORGANIZATIONS:
+   - Heading: "Our Supporters"
+   - Logo grid for: RNAA, CLAN Trust, Chadacre Trust
+   - Links to partner websites (from scraped content)
 
-Use sample/placeholder content for now. Implement smooth scroll animations between sections.
+9. CONTACT INFORMATION:
+   - USE real contact info from scraped-content/homepage.md:
+     * Office hours: Tuesday to Friday 9am - 2:30pm
+     * Phone: 01603 213688
+     * Emergency: County Chair Tom Fraser 07393430294
+
+Use real content from scraped-content/ where indicated. Create sample content for events, news, testimonials. Implement smooth scroll animations between sections.
 ```
 
 ---
@@ -748,11 +780,30 @@ Create a comprehensive handoff document explaining the demo and next steps for f
 
 ## 🎨 Design Inspiration & Assets
 
+### ✅ Real Assets Available
+
+**Location**: `scraped-content/` folder
+
+**Use These Real Assets**:
+- Norfolk YFC logo: `scraped-content/norfolk-yfc-logo.png`
+- Hero image: `scraped-content/hero-image.jpg`
+- Event image: `scraped-content/dinner-dance.jpg`
+- Real content: `scraped-content/homepage.md`
+
+**See**: `scraped-content/ASSETS-AND-CONTENT-SUMMARY.md` for complete brand analysis
+
 ### Color Palette
+
+**Real Brand Colors** (from logo):
 ```css
-/* Primary - Vibrant Green */
+/* Primary - From Real Logo */
+--primary-green: #2B7A3D
+--primary-yellow: #F4C430
+--primary-blue: #1E5BA8
+
+/* Enhanced for Demo (brighter, more web-friendly) */
 --primary-50: #e8f5e9
---primary-500: #2B9348
+--primary-500: #2B9348     /* Brightened green */
 --primary-700: #1B5E20
 
 /* Secondary - Bright Blue */
@@ -779,26 +830,33 @@ Create a comprehensive handoff document explaining the demo and next steps for f
 - **NFYFC**: Professional, organized, clear navigation
 - **Inspiration**: Bright colors, engaging imagery, easy navigation
 
-### Media Assets Needed
-1. **Hero Images**:
-   - Young farmers in action
-   - Group photos at events
-   - Norfolk countryside
+### Media Assets Available
 
-2. **Club Photos**:
+**✅ Real Assets** (in scraped-content/ folder):
+1. **Norfolk YFC Logo**: `scraped-content/norfolk-yfc-logo.png` (133KB)
+2. **Hero Image**: `scraped-content/hero-image.jpg` (142KB) - Young people at outdoor event
+3. **Event Image**: `scraped-content/dinner-dance.jpg` (29KB) - County Dinner Dance
+
+**📝 Additional Images Needed** (use Unsplash):
+1. **Club Photos**:
    - Individual club group photos
-   - Activity photos
+   - Activity photos (sports, competitions, social events)
 
-3. **Event Images**:
+2. **Event Images**:
    - Competitions
    - Social events
    - Training sessions
 
-4. **Logo**:
-   - Norfolk YFC logo (request from client)
-   - NFYFC logo for footer
+3. **Activity Categories**:
+   - Farming scenes
+   - Youth activities
+   - Community events
+   - Sports activities
 
-**Source**: Request from client or use high-quality placeholders from Unsplash
+4. **Partner Logos**:
+   - RNAA, CLAN Trust, Chadacre Trust (can fetch from their websites if needed)
+
+**Real Content Available**: See `scraped-content/homepage.md` and `scraped-content/ASSETS-AND-CONTENT-SUMMARY.md`
 
 ---
 

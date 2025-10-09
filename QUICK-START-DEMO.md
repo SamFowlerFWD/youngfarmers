@@ -189,17 +189,38 @@ The demo needs to **look good** and **feel modern**:
 
 ## 🎨 Design Reference
 
-**Colors to Use:**
+### ✅ Scraped Assets Available
+
+**Location**: `scraped-content/` folder
+
+**Use These Real Assets**:
+- Norfolk YFC logo (norfolk-yfc-logo.png)
+- Hero image (hero-image.jpg)
+- Event image (dinner-dance.jpg)
+- Real tagline: "Do More, Be More with Norfolk YFC"
+- Real content and messaging
+
+**See**: `scraped-content/ASSETS-AND-CONTENT-SUMMARY.md` for complete brand analysis
+
+**Brand Colors** (from current site):
 ```css
-Primary Green: #2B9348
-Secondary Blue: #1E88E5
-Accent Orange: #FF6F00
+Primary Green: #2B7A3D (from logo)
+Yellow/Gold: #F4C430 (from logo)
+Blue: #1E5BA8 (from logo)
+```
+
+**Recommended Modern Palette** (for demo):
+```css
+Primary Green: #2B9348 (slightly brighter)
+Secondary Blue: #1E88E5 (modern blue)
+Accent Orange: #FF6F00 (warm, energetic)
 ```
 
 **Inspiration:**
-- Visit norjam website for colorful, youthful design
-- Visit NFYFC website for professional layout
-- Combine both: vibrant but professional
+- Current Norfolk YFC site (friendly, welcoming)
+- Norjam website (colorful, youthful design)
+- NFYFC website (professional layout)
+- Combine: vibrant but professional
 
 **Visual Characteristics:**
 - Lots of white space
