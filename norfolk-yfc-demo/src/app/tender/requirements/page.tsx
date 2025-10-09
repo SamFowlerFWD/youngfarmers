@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { CheckCircle2, ExternalLink, Award, TrendingUp, Info } from "lucide-react";
 import Link from "next/link";
 
@@ -18,6 +19,12 @@ export default function RequirementsMatrixPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Breadcrumb */}
+        <Breadcrumb items={[
+          { label: "Tender Submission", href: "/tender" },
+          { label: "Requirements Matrix" }
+        ]} />
+
         {/* Requirements Matrix */}
         <Card className="mb-8">
           <CardHeader>

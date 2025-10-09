@@ -3,6 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import {
   CheckCircle2,
   ExternalLink,
@@ -38,6 +39,9 @@ export default function TenderSubmissionPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Breadcrumb */}
+        <Breadcrumb items={[{ label: "Tender Submission" }]} />
+
         {/* TL;DR Quick Link */}
         <div className="mb-8 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg p-6 shadow-lg">
           <div className="flex items-center justify-between">

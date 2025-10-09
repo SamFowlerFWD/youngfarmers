@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import {
   CheckCircle2,
   Clock,
@@ -27,6 +28,12 @@ export default function TLDRPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Breadcrumb */}
+        <Breadcrumb items={[
+          { label: "Tender Submission", href: "/tender" },
+          { label: "Quick Summary (TL;DR)" }
+        ]} />
+
         {/* The Bottom Line */}
         <Card className="mb-8 border-2 border-green-500 bg-green-50/50">
           <CardHeader>
@@ -214,7 +221,7 @@ export default function TLDRPage() {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900 mb-1">After 2 Years</p>
-                  <p className="text-gray-600">Can terminate with £500 fee for full documentation and codebase handover</p>
+                  <p className="text-gray-600">Can terminate with £195 fee for full documentation and codebase handover</p>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900 mb-1">Server Specs</p>

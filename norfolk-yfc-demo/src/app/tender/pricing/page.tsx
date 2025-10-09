@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import {
   CheckCircle2,
   Info,
@@ -28,6 +29,12 @@ export default function PricingProposalPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Breadcrumb */}
+        <Breadcrumb items={[
+          { label: "Tender Submission", href: "/tender" },
+          { label: "Pricing & Costs" }
+        ]} />
+
         {/* Value Proposition */}
         <Alert className="mb-8 bg-green-50 border-green-200">
           <Info className="h-4 w-4 text-green-600" />
@@ -430,7 +437,7 @@ export default function PricingProposalPage() {
                 </p>
                 <ul className="text-sm text-blue-800 space-y-1">
                   <li>• <strong>Minimum commitment:</strong> 2 years from launch date (billed annually at £960/year)</li>
-                  <li>• <strong>Termination after 2 years:</strong> Requires £500 admin fee covering:
+                  <li>• <strong>Termination after 2 years:</strong> Requires £195 admin fee covering:
                     <ul className="ml-6 mt-1 space-y-1">
                       <li>- Comprehensive technical documentation</li>
                       <li>- Complete codebase handover</li>
@@ -555,7 +562,7 @@ export default function PricingProposalPage() {
                 <Info className="h-4 w-4 text-amber-600" />
                 <AlertDescription className="text-sm text-amber-900">
                   <strong>Contract Terms:</strong> Hosting + Management billed annually (£960/year) with minimum 2-year commitment from launch date.
-                  After 2 years, termination requires a £500 admin fee for comprehensive documentation and complete codebase handover.
+                  After 2 years, termination requires a £195 admin fee for comprehensive documentation and complete codebase handover.
                 </AlertDescription>
               </Alert>
             </div>

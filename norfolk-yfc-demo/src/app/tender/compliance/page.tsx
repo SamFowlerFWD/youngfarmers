@@ -11,6 +11,7 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import Link from "next/link";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 
 export default function CompliancePage() {
   return (
@@ -26,6 +27,8 @@ export default function CompliancePage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <Breadcrumb items={[{ label: "Tender Submission", href: "/tender" }, { label: "Compliance & Legal" }]} />
+
         {/* Compliance Overview */}
         <Alert className="mb-8 bg-green-50 border-green-200">
           <CheckCircle2 className="h-4 w-4 text-green-600" />

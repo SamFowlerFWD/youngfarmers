@@ -154,7 +154,7 @@ Yellow Accent: #F4C430      /* Keep from logo for highlights */
 - Managed hosting on private server (GDPR compliant)
 - All maintenance, support, security updates included
 - Minimum 2-year commitment from launch
-- After 2 years: £500 termination fee for documentation & codebase handover
+- After 2 years: £195 termination fee for documentation & codebase handover
 
 **Timeline**: ~12 weeks (Complete by mid-February 2026)
 - Weeks 1-2: Discovery & Planning (including GDPR mapping)

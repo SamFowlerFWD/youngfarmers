@@ -210,7 +210,7 @@ TOTAL (including VAT)                                £ ______
    - Mandatory managed hosting on private server (GDPR compliance)
    - Billed annually: £960/year (£80/month)
    - Minimum 2-year commitment from launch date
-   - After 2 years, termination incurs £500 admin fee covering:
+   - After 2 years, termination incurs £195 admin fee covering:
      * Comprehensive technical documentation
      * Complete codebase handover with full access
      * Server access credentials transfer

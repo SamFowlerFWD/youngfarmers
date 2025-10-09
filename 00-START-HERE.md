@@ -118,7 +118,7 @@ Win the Norfolk FYFC website tender by building a compelling demo that shows you
 - Managed hosting on private server (GDPR compliant)
 - All maintenance, support, security updates included
 - Minimum 2-year commitment from launch
-- After 2 years: £500 termination fee for documentation & codebase handover
+- After 2 years: £195 termination fee for documentation & codebase handover
 
 **Timeline**: ~12 weeks actual work (Nov 21, 2025 → Mid-February 2026)
 - Complete project delivery: Mid-February 2026
