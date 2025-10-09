@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, ExternalLink, Award, TrendingUp } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { CheckCircle2, ExternalLink, Award, TrendingUp, Info } from "lucide-react";
 import Link from "next/link";
 
 export default function RequirementsMatrixPage() {
@@ -428,11 +429,19 @@ export default function RequirementsMatrixPage() {
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                   <p>
-                    <strong>SEO Optimized:</strong> Structured data, meta tags, sitemap - ready for Google ranking
+                    <strong>SEO Optimised:</strong> Structured data, meta tags, sitemap - ready for Google ranking
                   </p>
                 </div>
               </div>
             </div>
+            <Alert className="mt-6 bg-blue-50 border-blue-200">
+              <Info className="h-4 w-4 text-blue-600" />
+              <AlertDescription className="text-sm text-blue-900">
+                <strong>Note:</strong> These scores are from the current demonstration build. The production website
+                will undergo comprehensive optimisation including image compression, code minification, lazy loading,
+                and performance tuning. These scores represent a baseline and should only improve with production optimisation.
+              </AlertDescription>
+            </Alert>
           </CardContent>
         </Card>
 

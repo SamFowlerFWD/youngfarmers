@@ -427,18 +427,15 @@ export default function TenderSubmissionPage() {
                     <span className="font-semibold">£2,500</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-700">Hosting (annual):</span>
-                    <span className="font-semibold">£500</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-700">Support (monthly):</span>
-                    <span className="font-semibold">£50</span>
+                    <span className="text-gray-700">Hosting + Management:</span>
+                    <span className="font-semibold">£960/year</span>
                   </div>
                   <div className="border-t-2 border-green-300 pt-2 flex justify-between">
                     <span className="font-bold text-green-900">Year 1 Total:</span>
-                    <span className="font-bold text-green-900 text-lg">£3,600</span>
+                    <span className="font-bold text-green-900 text-lg">£3,460</span>
                   </div>
                   <p className="text-xs text-green-700 pt-1">✓ No VAT to add</p>
+                  <p className="text-xs text-green-700">✓ GDPR compliant hosting</p>
                 </div>
               </div>
 
@@ -452,13 +449,13 @@ export default function TenderSubmissionPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-blue-900">Launch Date:</p>
-                    <p className="text-gray-700">31 May 2026</p>
+                    <p className="text-gray-700">Mid-February 2026</p>
                   </div>
                   <div>
                     <p className="font-semibold text-blue-900">Duration:</p>
-                    <p className="text-gray-700">27 weeks</p>
+                    <p className="text-gray-700">~12 weeks</p>
                   </div>
-                  <p className="text-xs text-blue-700 pt-1">✓ Fixed deadline commitment</p>
+                  <p className="text-xs text-blue-700 pt-1">✓ May 31st contractual buffer</p>
                 </div>
               </div>
 
@@ -470,15 +467,7 @@ export default function TenderSubmissionPage() {
                     <p className="font-semibold text-orange-900">Professional Indemnity:</p>
                     <p className="text-gray-700">£1,000,000</p>
                   </div>
-                  <div>
-                    <p className="font-semibold text-orange-900">Public Liability:</p>
-                    <p className="text-gray-700">£2,000,000</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-orange-900">You Own:</p>
-                    <p className="text-gray-700">Server + Full Codebase</p>
-                  </div>
-                  <p className="text-xs text-orange-700 pt-1">✓ Zero vendor lock-in</p>
+                  <p className="text-xs text-orange-700 pt-3 italic">Certificate available upon request</p>
                 </div>
               </div>
             </div>
@@ -631,8 +620,8 @@ export default function TenderSubmissionPage() {
                       <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </h3>
                     <p className="text-sm text-gray-600 mb-3">
-                      Complete cost breakdown in RFQ format: £3,600 Year 1 (£2,500 production + £500 hosting + £600 support).
-                      No VAT. Includes project timeline Nov 2025 → May 2026.
+                      Complete cost breakdown in RFQ format: £3,460 Year 1 (£2,500 production + £960 hosting/management).
+                      No VAT. GDPR-compliant managed hosting. Timeline Nov 2025 → Mid-Feb 2026.
                     </p>
                     <div className="flex items-center justify-between">
                       <Badge className="bg-green-100 text-green-800">25% of Evaluation</Badge>
@@ -685,8 +674,8 @@ export default function TenderSubmissionPage() {
                       <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </h3>
                     <p className="text-sm text-gray-600 mb-3">
-                      Detailed plans for staff absence, backup developers, business continuity. Insurance certificates
-                      (£1M Professional Indemnity, £2M Public Liability), financial stability proof.
+                      Detailed plans for staff absence, backup developers, business continuity. Insurance certificate
+                      (£1M Professional Indemnity), financial stability proof.
                     </p>
                     <div className="flex items-center justify-between">
                       <Badge className="bg-orange-100 text-orange-800">5% of Evaluation</Badge>
@@ -754,8 +743,8 @@ export default function TenderSubmissionPage() {
                 <Mail className="h-5 w-5 mt-1" />
                 <div>
                   <p className="font-semibold mb-1">Email</p>
-                  <a href="mailto:info@f-w-d.co.uk" className="text-white/90 hover:text-white underline">
-                    info@f-w-d.co.uk
+                  <a href="mailto:info@sam-fowler.com" className="text-white/90 hover:text-white underline">
+                    info@sam-fowler.com
                   </a>
                 </div>
               </div>

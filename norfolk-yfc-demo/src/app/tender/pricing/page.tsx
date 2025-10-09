@@ -60,12 +60,14 @@ export default function PricingProposalPage() {
                   <tbody className="divide-y">
                     <tr className="hover:bg-gray-50">
                       <td className="p-4">
-                        <p className="font-medium">Cost of hosting website per annum</p>
+                        <p className="font-medium">Hosting, Management & GDPR Compliance (per month)</p>
                         <p className="text-sm text-gray-600">
-                          Private server hosting, SSL certificate, automated backups, CDN, 99.9% uptime guarantee
+                          Private server hosting for GDPR compliance, SSL certificate, automated backups, CDN,
+                          99.9% uptime guarantee, security updates, bug fixes, small content changes, performance
+                          monitoring, technical support
                         </p>
                       </td>
-                      <td className="p-4 text-right font-semibold">£500</td>
+                      <td className="p-4 text-right font-semibold">£80</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
                       <td className="p-4">
@@ -75,16 +77,6 @@ export default function PricingProposalPage() {
                         </p>
                       </td>
                       <td className="p-4 text-right font-semibold">£2,500</td>
-                    </tr>
-                    <tr className="hover:bg-gray-50">
-                      <td className="p-4">
-                        <p className="font-medium">Ongoing Support & Maintenance (per month)</p>
-                        <p className="text-sm text-gray-600">
-                          Includes: security updates, bug fixes, small text/image changes, performance monitoring,
-                          backup management, technical support
-                        </p>
-                      </td>
-                      <td className="p-4 text-right font-semibold">£50</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
                       <td className="p-4">
@@ -99,11 +91,11 @@ export default function PricingProposalPage() {
                   <tfoot className="bg-primary text-white">
                     <tr>
                       <td className="p-4 font-bold text-lg">FIRST YEAR TOTAL (all-inclusive)</td>
-                      <td className="p-4 text-right font-bold text-2xl">£3,600</td>
+                      <td className="p-4 text-right font-bold text-2xl">£3,460</td>
                     </tr>
                     <tr className="bg-primary/90">
                       <td className="p-4 font-semibold">Annual Running Costs (Year 2 onwards)</td>
-                      <td className="p-4 text-right font-semibold text-lg">£1,100/year</td>
+                      <td className="p-4 text-right font-semibold text-lg">£960/year</td>
                     </tr>
                   </tfoot>
                 </table>
@@ -122,19 +114,18 @@ export default function PricingProposalPage() {
                       <span className="font-semibold">£2,500</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Hosting (annual):</span>
-                      <span className="font-semibold">£500</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Support (12 months @ £50/mo):</span>
-                      <span className="font-semibold">£600</span>
+                      <span>Hosting + Management (12 months @ £80/mo):</span>
+                      <span className="font-semibold">£960</span>
                     </div>
                     <div className="border-t border-blue-300 pt-2 mt-2 flex justify-between font-bold text-lg">
                       <span>Total Year 1:</span>
-                      <span>£3,600</span>
+                      <span>£3,460</span>
                     </div>
                     <p className="text-xs mt-2 text-blue-700">
                       ✓ No VAT to add • ✓ No hidden fees • ✓ All-inclusive pricing
+                    </p>
+                    <p className="text-xs mt-2 text-blue-800 font-semibold">
+                      Payment: £750 deposit (30%) + £1,750 on completion (70%)
                     </p>
                   </div>
                 </div>
@@ -146,19 +137,18 @@ export default function PricingProposalPage() {
                   </h3>
                   <div className="space-y-2 text-sm text-green-800">
                     <div className="flex justify-between">
-                      <span>Hosting (annual):</span>
-                      <span className="font-semibold">£500</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Support (12 months @ £50/mo):</span>
-                      <span className="font-semibold">£600</span>
+                      <span>Hosting + Management (annual):</span>
+                      <span className="font-semibold">£960</span>
                     </div>
                     <div className="border-t border-green-300 pt-2 mt-2 flex justify-between font-bold text-lg">
                       <span>Total Year 2+:</span>
-                      <span>£1,100/year</span>
+                      <span>£960/year</span>
                     </div>
                     <p className="text-xs mt-2 text-green-700">
-                      Optional: Pay monthly (£91.67/mo) or annually (£1,100/year)
+                      Billed annually: £960/year (equivalent to £80/month)
+                    </p>
+                    <p className="text-xs mt-2 text-green-800 font-semibold">
+                      Minimum 2-year commitment from launch
                     </p>
                   </div>
                 </div>
@@ -166,32 +156,85 @@ export default function PricingProposalPage() {
 
               {/* Hosting Details */}
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="font-bold text-gray-900 mb-3">Hosting Arrangement: Transparent & Fair</h3>
+                <h3 className="font-bold text-gray-900 mb-3">Managed Hosting for GDPR Compliance</h3>
                 <p className="text-sm text-gray-700 mb-3">
-                  For charitable organisations like Norfolk YFC, I offer <strong>transparent direct payment</strong> options:
+                  All websites are hosted on private servers managed by me to ensure full GDPR compliance and data protection:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="font-semibold text-gray-900 mb-2">Option 1: I Manage (Recommended)</p>
+                    <p className="font-semibold text-gray-900 mb-2">Why Managed Hosting?</p>
                     <ul className="space-y-1 text-gray-700">
-                      <li>• I handle all hosting setup and management</li>
-                      <li>• You pay me £500/year (or £41.67/month)</li>
-                      <li>• Includes server management, security, backups</li>
-                      <li>• One invoice, simple accounting</li>
+                      <li>• GDPR compliance guaranteed</li>
+                      <li>• UK-based private server infrastructure</li>
+                      <li>• Full data protection controls</li>
+                      <li>• Secure member data handling</li>
+                      <li>• 99.9% uptime guarantee</li>
                     </ul>
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900 mb-2">Option 2: Direct Payment</p>
+                    <p className="font-semibold text-gray-900 mb-2">What's Included</p>
                     <ul className="space-y-1 text-gray-700">
-                      <li>• Norfolk YFC pays hosting provider directly</li>
-                      <li>• I provide technical management at no markup</li>
-                      <li>• Full transparency on actual costs</li>
-                      <li>• You maintain direct control</li>
+                      <li>• Private server hosting</li>
+                      <li>• SSL certificates</li>
+                      <li>• Automated daily backups</li>
+                      <li>• CDN and performance optimisation</li>
+                      <li>• Security monitoring and updates</li>
                     </ul>
                   </div>
                 </div>
+
+                <div className="mt-6 bg-white border border-gray-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                    <Target className="h-5 w-5 text-primary" />
+                    VPS Server Specifications
+                  </h4>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+                    <div className="bg-blue-50 rounded p-2">
+                      <p className="font-semibold text-blue-900">4 vCPU Cores</p>
+                      <p className="text-blue-700">High performance processing</p>
+                    </div>
+                    <div className="bg-green-50 rounded p-2">
+                      <p className="font-semibold text-green-900">16 GB RAM</p>
+                      <p className="text-green-700">Fast response times</p>
+                    </div>
+                    <div className="bg-purple-50 rounded p-2">
+                      <p className="font-semibold text-purple-900">200 GB NVMe</p>
+                      <p className="text-purple-700">Ultra-fast storage</p>
+                    </div>
+                    <div className="bg-orange-50 rounded p-2">
+                      <p className="font-semibold text-orange-900">16 TB Bandwidth</p>
+                      <p className="text-orange-700">Unlimited traffic capacity</p>
+                    </div>
+                    <div className="bg-pink-50 rounded p-2">
+                      <p className="font-semibold text-pink-900">Weekly Backups</p>
+                      <p className="text-pink-700">+ 1 snapshot included</p>
+                    </div>
+                    <div className="bg-indigo-50 rounded p-2">
+                      <p className="font-semibold text-indigo-900">Security Suite</p>
+                      <p className="text-indigo-700">AI assistant + malware scanner</p>
+                    </div>
+                  </div>
+                  <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-2 text-xs text-gray-700">
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="h-3 w-3 text-green-600" />
+                      <span>Dedicated IP Address</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="h-3 w-3 text-green-600" />
+                      <span>Full Root Access</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="h-3 w-3 text-green-600" />
+                      <span>UK Data Centre</span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-gray-600 mt-3 italic">
+                    Enterprise-grade infrastructure ensures exceptional performance and reliability for Norfolk YFC
+                  </p>
+                </div>
+
                 <p className="text-xs text-gray-600 mt-3 italic">
-                  Note: Direct payment option ensures you know exactly where every pound goes - no hidden markups or commissions.
+                  Note: £960/year (£80/month) covers all hosting, management, and GDPR compliance requirements.
                 </p>
               </div>
             </div>
@@ -325,8 +368,8 @@ export default function PricingProposalPage() {
         {/* Ongoing Support Details */}
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle className="text-2xl">What's Included in Monthly Support (£50/month)</CardTitle>
-            <CardDescription>Comprehensive ongoing maintenance and support</CardDescription>
+            <CardTitle className="text-2xl">What's Included in Hosting + Management (£80/month)</CardTitle>
+            <CardDescription>Comprehensive hosting, maintenance, support and GDPR compliance</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -373,6 +416,26 @@ export default function PricingProposalPage() {
                 </p>
               </div>
             </div>
+            <Alert className="mt-6 bg-blue-50 border-blue-200">
+              <Info className="h-4 w-4 text-blue-600" />
+              <AlertDescription>
+                <p className="text-sm text-blue-900 mb-2">
+                  <strong>Support Contract Terms:</strong>
+                </p>
+                <ul className="text-sm text-blue-800 space-y-1">
+                  <li>• <strong>Minimum commitment:</strong> 2 years from launch date (billed annually at £960/year)</li>
+                  <li>• <strong>Termination after 2 years:</strong> Requires £500 admin fee covering:
+                    <ul className="ml-6 mt-1 space-y-1">
+                      <li>- Comprehensive technical documentation</li>
+                      <li>- Complete codebase handover</li>
+                      <li>- Server access credentials and transfer</li>
+                      <li>- Knowledge transfer session</li>
+                    </ul>
+                  </li>
+                  <li>• <strong>After termination:</strong> Full ownership and access to all code and systems (client responsible for own hosting)</li>
+                </ul>
+              </AlertDescription>
+            </Alert>
             <p className="text-sm text-gray-600 mt-4 italic">
               Note: Major new features or redesigns are quoted separately at £50/hour or fixed project price.
             </p>
@@ -384,9 +447,9 @@ export default function PricingProposalPage() {
           <CardHeader>
             <CardTitle className="text-2xl flex items-center gap-2">
               <Calendar className="h-6 w-6 text-primary" />
-              Project Timeline: 21 November 2025 → 31 May 2026
+              Project Timeline: 21 November 2025 → Mid-February 2026
             </CardTitle>
-            <CardDescription>27-week delivery schedule with key milestones</CardDescription>
+            <CardDescription>~12 week delivery - complete by mid-February (May 31st is contractual end date with buffer)</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -396,13 +459,13 @@ export default function PricingProposalPage() {
                   <Badge variant="secondary">Nov 21 - Dec 5</Badge>
                 </div>
                 <p className="text-sm text-gray-600">
-                  Requirements workshop, content audit, technical documentation, project setup
+                  Requirements workshop, content audit, technical documentation, project setup, GDPR requirements mapping
                 </p>
               </div>
               <div className="border-l-4 border-purple-500 pl-4 py-2">
                 <div className="flex items-center justify-between mb-1">
-                  <h4 className="font-semibold">Weeks 3-6: Design & Prototyping</h4>
-                  <Badge variant="secondary">Dec 6 - Jan 2</Badge>
+                  <h4 className="font-semibold">Weeks 3-5: Design & Prototyping</h4>
+                  <Badge variant="secondary">Dec 6 - Dec 26</Badge>
                 </div>
                 <p className="text-sm text-gray-600">
                   Visual design, component library, page layouts, design approval
@@ -410,55 +473,41 @@ export default function PricingProposalPage() {
               </div>
               <div className="border-l-4 border-green-500 pl-4 py-2">
                 <div className="flex items-center justify-between mb-1">
-                  <h4 className="font-semibold">Weeks 7-14: Core Development</h4>
-                  <Badge variant="secondary">Jan 3 - Feb 27</Badge>
+                  <h4 className="font-semibold">Weeks 6-10: Core Development & Compliance</h4>
+                  <Badge variant="secondary">Dec 27 - Jan 30</Badge>
                 </div>
                 <p className="text-sm text-gray-600">
-                  Build all pages, CMS setup, e-commerce, map, events, jobs board, integrations
+                  Build all pages, CMS setup, e-commerce, map, events, jobs board, integrations, GDPR compliance implementation,
+                  accessibility features, security hardening (concurrent with feature development)
                 </p>
               </div>
               <div className="border-l-4 border-orange-500 pl-4 py-2">
                 <div className="flex items-center justify-between mb-1">
-                  <h4 className="font-semibold">Weeks 15-18: Content & Migration</h4>
-                  <Badge variant="secondary">Feb 28 - Mar 27</Badge>
+                  <h4 className="font-semibold">Weeks 11-12: Testing, Training & Launch</h4>
+                  <Badge variant="secondary">Jan 31 - Feb 13</Badge>
                 </div>
                 <p className="text-sm text-gray-600">
-                  Content migration, SEO optimisation, image processing, copy finalisation
-                </p>
-              </div>
-              <div className="border-l-4 border-red-500 pl-4 py-2">
-                <div className="flex items-center justify-between mb-1">
-                  <h4 className="font-semibold">Weeks 19-23: Testing & Training</h4>
-                  <Badge variant="secondary">Mar 28 - Apr 24</Badge>
-                </div>
-                <p className="text-sm text-gray-600">
-                  QA testing, accessibility audit, browser testing, staff training session
-                </p>
-              </div>
-              <div className="border-l-4 border-yellow-500 pl-4 py-2">
-                <div className="flex items-center justify-between mb-1">
-                  <h4 className="font-semibold">Week 24-25: Launch Preparation</h4>
-                  <Badge variant="secondary">Apr 25 - May 8</Badge>
-                </div>
-                <p className="text-sm text-gray-600">
-                  Final testing, DNS configuration, data migration, go-live checklist
+                  Content migration, QA testing, accessibility audit, security testing, staff training, go-live
                 </p>
               </div>
               <div className="border-l-4 border-primary pl-4 py-2 bg-primary/5">
                 <div className="flex items-center justify-between mb-1">
-                  <h4 className="font-semibold">Week 26-27: Launch & Support</h4>
-                  <Badge className="bg-primary">May 9 - May 31</Badge>
+                  <h4 className="font-semibold">Feb 14 - May 31: Post-Launch Buffer</h4>
+                  <Badge className="bg-primary">Warranty Period</Badge>
                 </div>
                 <p className="text-sm text-gray-600">
-                  Website launch, post-launch monitoring, immediate bug fixes, handover
+                  Project complete mid-February. Remaining period provides buffer for any adjustments, bug fixes, and warranty support
                 </p>
               </div>
             </div>
             <Alert className="mt-6">
               <Info className="h-4 w-4" />
               <AlertDescription className="text-sm">
-                <strong>Client Involvement:</strong> Bi-weekly check-ins, design approval (Week 6), content reviews (Weeks 15-18),
-                training session (Week 22), launch approval (Week 25)
+                <strong>Realistic Timeline:</strong> The complete project will be delivered by mid-February 2026. Whilst the website
+                will appear "done" on the surface relatively quickly, substantial technical work is required throughout to ensure proper
+                GDPR compliance, legal requirements, security hardening, accessibility certification, and thorough testing. The May 31st
+                date is the contractual end date providing buffer for any final adjustments. Client involvement: bi-weekly check-ins,
+                design approval (Week 6), content reviews (Weeks 10-11), training session (Week 11), launch (mid-February).
               </AlertDescription>
             </Alert>
           </CardContent>
@@ -475,25 +524,32 @@ export default function PricingProposalPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
                   <p className="text-sm text-blue-700 mb-1">Upon Contract Signing</p>
-                  <p className="text-2xl font-bold text-blue-900">£1,250</p>
-                  <p className="text-xs text-blue-600 mt-1">(50% of production cost)</p>
+                  <p className="text-2xl font-bold text-blue-900">£750</p>
+                  <p className="text-xs text-blue-600 mt-1">(30% deposit)</p>
                 </div>
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
-                  <p className="text-sm text-green-700 mb-1">Upon Launch (May 31)</p>
-                  <p className="text-2xl font-bold text-green-900">£1,250</p>
-                  <p className="text-xs text-green-600 mt-1">(50% of production cost)</p>
+                  <p className="text-sm text-green-700 mb-1">Upon Completion</p>
+                  <p className="text-2xl font-bold text-green-900">£1,750</p>
+                  <p className="text-xs text-green-600 mt-1">(70% balance)</p>
                 </div>
                 <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
-                  <p className="text-sm text-purple-700 mb-1">Monthly (ongoing)</p>
-                  <p className="text-2xl font-bold text-purple-900">£92</p>
-                  <p className="text-xs text-purple-600 mt-1">(£50 support + £42 hosting)</p>
+                  <p className="text-sm text-purple-700 mb-1">Annual (ongoing)</p>
+                  <p className="text-2xl font-bold text-purple-900">£960</p>
+                  <p className="text-xs text-purple-600 mt-1">(Hosting + Management)</p>
                 </div>
               </div>
-              <Alert>
-                <Info className="h-4 w-4" />
-                <AlertDescription className="text-sm">
-                  <strong>Flexible Options:</strong> Can also invoice hosting annually (£500) and support monthly (£50),
-                  or combine into one annual invoice (£1,100) for simplified accounting.
+              <Alert className="bg-blue-50 border-blue-200">
+                <Info className="h-4 w-4 text-blue-600" />
+                <AlertDescription className="text-sm text-blue-900">
+                  <strong>Payment Terms:</strong> 70% balance due upon completion and handover, even if delivered ahead of schedule.
+                  Early delivery does not affect payment terms.
+                </AlertDescription>
+              </Alert>
+              <Alert className="bg-amber-50 border-amber-200 mt-4">
+                <Info className="h-4 w-4 text-amber-600" />
+                <AlertDescription className="text-sm text-amber-900">
+                  <strong>Contract Terms:</strong> Hosting + Management billed annually (£960/year) with minimum 2-year commitment from launch date.
+                  After 2 years, termination requires a £500 admin fee for comprehensive documentation and complete codebase handover.
                 </AlertDescription>
               </Alert>
             </div>
@@ -640,6 +696,103 @@ export default function PricingProposalPage() {
                 </div>
               </div>
 
+              {/* Native Mobile App */}
+              <div className="bg-white rounded-lg p-6 border-2 border-indigo-200">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="font-bold text-lg text-indigo-900 mb-2">Native Mobile App (iOS & Android)</h3>
+                    <p className="text-sm text-gray-600 mb-3">
+                      Full native mobile application for iOS and Android with API integration to both Silo database and website database
+                    </p>
+                  </div>
+                  <Badge className="bg-indigo-100 text-indigo-800 text-lg px-4 py-2">£3,500</Badge>
+                </div>
+
+                <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-4">
+                  <p className="text-sm text-amber-900 font-semibold mb-1">
+                    ⚠️ Requires: Member Login & User System (£1,250)
+                  </p>
+                  <p className="text-xs text-amber-800">
+                    The native app needs the user authentication system in place to function. This must be implemented first.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2">Native App Features:</h4>
+                    <ul className="space-y-1 text-sm text-gray-700">
+                      <li>✓ True native iOS and Android apps</li>
+                      <li>✓ Published on App Store & Google Play</li>
+                      <li>✓ Full offline functionality</li>
+                      <li>✓ Native push notifications</li>
+                      <li>✓ Device camera & location integration</li>
+                      <li>✓ Biometric authentication (Face ID, fingerprint)</li>
+                      <li>✓ Native UI/UX optimised for each platform</li>
+                      <li>✓ Background sync capabilities</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2">Database Integration:</h4>
+                    <ul className="space-y-1 text-sm text-gray-700">
+                      <li>🔗 API integration to website database</li>
+                      <li>🔗 API integration to Silo member database</li>
+                      <li>🔄 Real-time sync between systems</li>
+                      <li>📊 Access member data from both sources</li>
+                      <li>🎫 Event bookings sync across platforms</li>
+                      <li>🛒 Shop orders accessible in app</li>
+                      <li>👤 Member profiles from Silo data</li>
+                      <li>📈 Competition entries and results</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 mb-3">
+                  <h4 className="font-semibold text-sm text-indigo-900 mb-2">What Makes This Different from PWA?</h4>
+                  <div className="space-y-2 text-sm text-indigo-800">
+                    <div className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                      <p>
+                        <strong>Store Presence:</strong> Listed in App Store & Google Play for discoverability
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                      <p>
+                        <strong>Native Performance:</strong> Faster, smoother, more responsive than web-based PWA
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                      <p>
+                        <strong>Device Features:</strong> Full access to camera, GPS, biometrics, and native APIs
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                      <p>
+                        <strong>Concurrent Database Access:</strong> Pulls data from both website and Silo simultaneously
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <p className="text-sm text-green-900 mb-2">
+                    <strong>Perfect For:</strong> Organisations wanting maximum member engagement and modern digital presence
+                  </p>
+                  <ul className="space-y-1 text-sm text-green-800">
+                    <li>• Professional presence alongside major national organisations</li>
+                    <li>• Real-time access to Silo member data within the app</li>
+                    <li>• Seamless experience between website and mobile app</li>
+                    <li>• Enhanced member engagement through native app experience</li>
+                    <li>• Future-ready for expanding digital services</li>
+                  </ul>
+                  <p className="text-xs text-green-700 mt-3 italic">
+                    Note: Requires Silo API documentation and access credentials
+                  </p>
+                </div>
+              </div>
+
               {/* Combined Package */}
               <div className="bg-gradient-to-r from-purple-100 to-blue-100 rounded-lg p-6 border-2 border-purple-300">
                 <div className="flex items-center justify-between mb-4">
@@ -664,6 +817,40 @@ export default function PricingProposalPage() {
                 </div>
               </div>
 
+              {/* Ultimate Package */}
+              <div className="bg-gradient-to-r from-indigo-100 via-purple-100 to-blue-100 rounded-lg p-6 border-2 border-indigo-300 mb-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">🚀 Ultimate Package: User System + PWA + Native App</h3>
+                    <p className="text-sm text-gray-700">Complete mobile solution with all platforms covered</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-sm text-gray-600 line-through">£5,500</p>
+                    <Badge className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white text-xl px-6 py-2">
+                      £5,000
+                    </Badge>
+                  </div>
+                </div>
+                <div className="bg-white/80 rounded-lg p-4">
+                  <p className="text-sm text-gray-800 mb-3">
+                    <strong>Complete digital ecosystem:</strong> Member login system, PWA for easy installation,
+                    plus full native apps on both iOS and Android. All systems connected to both your website database
+                    and Silo member database for unified member experience.
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-gray-700">
+                    <div className="bg-blue-50 p-2 rounded">
+                      <strong>Website:</strong> Full user system with profiles
+                    </div>
+                    <div className="bg-purple-50 p-2 rounded">
+                      <strong>PWA:</strong> Installable web app
+                    </div>
+                    <div className="bg-indigo-50 p-2 rounded">
+                      <strong>Native:</strong> App Store presence
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* Other Upgrades */}
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="font-semibold mb-3">Other Potential Upgrades (Future):</h3>
@@ -679,10 +866,6 @@ export default function PricingProposalPage() {
                   <div className="flex justify-between">
                     <span>Competition entry & voting system:</span>
                     <span className="font-semibold">From £600</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Advanced analytics dashboard:</span>
-                    <span className="font-semibold">From £400</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Email newsletter automation:</span>

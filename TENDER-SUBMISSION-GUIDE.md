@@ -158,14 +158,15 @@ TOTAL (including VAT)                                £ ______
 
 **Detailed Breakdown to Provide**:
 
-1. **Hosting Costs (Annual)**:
-   - Web hosting (specify provider, specifications)
+1. **Hosting & Management (Annual)**:
+   - Managed private server hosting (GDPR compliant)
    - Database hosting
    - CDN/media storage
    - SSL certificates
    - Domain renewal
    - Backup services
-   - **Total Hosting per Annum**: £1,200 - £2,400
+   - All maintenance and support
+   - **Total Hosting & Management per Annum**: £960 (£80/month)
 
 2. **Production Charges** (one-time):
    - Project management (% of total or hours)
@@ -202,12 +203,22 @@ TOTAL (including VAT)                                £ ______
    - Training (2 days, in-person): £1,000 - £1,500
    - User documentation: £500 - £1,000
    - Video tutorials: £500 - £1,000
-   - Ongoing support (first year): £2,400 - £4,800
    - Third-party service fees (Stripe %): Pass-through
-   - **Total Other Fees**: £4,400 - £8,300
+   - **Total Other Fees**: £2,000 - £3,500
+
+   **Hosting & Management Contract Terms**:
+   - Mandatory managed hosting on private server (GDPR compliance)
+   - Billed annually: £960/year (£80/month)
+   - Minimum 2-year commitment from launch date
+   - After 2 years, termination incurs £500 admin fee covering:
+     * Comprehensive technical documentation
+     * Complete codebase handover with full access
+     * Server access credentials transfer
+     * Knowledge transfer session
+   - Client responsible for own hosting after termination
 
 **TOTAL PROJECT COST RANGE**: £40,000 - £65,000 (+ VAT)
-**Annual Running Costs**: £4,000 - £8,500
+**Annual Running Costs**: £960/year (£80/month) - billed annually
 
 **Important**:
 - Specify what's included vs. additional
@@ -311,17 +322,17 @@ TOTAL (including VAT)                                £ ______
 
 ### Timeline & Milestones
 
-**Project Schedule** (21 Nov 2025 → 31 May 2026 = 27 weeks available):
+**Project Schedule** (21 Nov 2025 → Mid-February 2026 = ~12 weeks delivery):
+
+**Reality Check**: Complete project delivery by mid-February 2026. Whilst the website appears "done" on the surface relatively quickly, substantial technical work (GDPR compliance, legal requirements, security hardening) happens concurrently throughout the build to ensure production readiness. May 31st is the contractual end date providing warranty/buffer period.
 
 | Phase | Duration | Deliverable | Client Review |
 |-------|----------|------------|---------------|
-| **Discovery** | Weeks 1-2 | Requirements doc, site map | Workshop |
-| **Design** | Weeks 3-6 | Design system, key page mockups | Approval meeting |
-| **Development** | Weeks 7-16 | Core website, CMS, integrations | Weekly demos |
-| **Content** | Weeks 17-20 | Copywriting, SEO, migration | Content review |
-| **Testing** | Weeks 21-24 | QA, accessibility, training | User testing |
-| **Launch** | Week 25 | Go-live, support handover | Launch event |
-| **Warranty** | Weeks 26-27 | Bug fixes, adjustments | Post-launch review |
+| **Discovery** | Weeks 1-2 | Requirements doc, site map, GDPR mapping | Workshop |
+| **Design** | Weeks 3-5 | Design system, key page mockups | Approval meeting |
+| **Development** | Weeks 6-10 | Core website, CMS, integrations, GDPR implementation, security | Weekly demos |
+| **Testing & Launch** | Weeks 11-12 | Content migration, QA, training, go-live | Launch event |
+| **Post-Launch** | Feb-May | Warranty period, bug fixes, adjustments | As needed |
 
 **Client Touchpoints**:
 - Weekly progress updates (email)

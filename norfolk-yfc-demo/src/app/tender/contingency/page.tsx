@@ -289,19 +289,6 @@ export default function ContingencyPage() {
                     <p className="text-xs italic mt-3">Certificate available upon request</p>
                   </div>
                 </div>
-
-                <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                  <h3 className="font-bold text-green-900 mb-3 flex items-center gap-2">
-                    <Shield className="h-5 w-5" />
-                    Public Liability Insurance
-                  </h3>
-                  <div className="space-y-2 text-sm text-green-800">
-                    <p><strong>Coverage:</strong> £2,000,000</p>
-                    <p><strong>Provider:</strong> Simply Business / Hiscox</p>
-                    <p><strong>Covers:</strong> Accidental injury or property damage to third parties, legal defense costs</p>
-                    <p className="text-xs italic mt-3">Certificate available upon request</p>
-                  </div>
-                </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">

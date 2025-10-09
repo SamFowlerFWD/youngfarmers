@@ -8,8 +8,8 @@ This repository contains the **Norfolk Federation of Young Farmers Clubs (Norfol
 
 **Project Status**: Building functional demo for tender presentation
 **Demo Timeline**: 3-5 days to build working prototype
-**Full Project Launch**: May 31, 2026 (if tender won)
-**Full Project Duration**: 24 weeks from Nov 21, 2025
+**Full Project Launch**: Mid-February 2026 (if tender won)
+**Full Project Duration**: ~12 weeks from Nov 21, 2025 (May 31, 2026 is contractual end date with warranty buffer)
 
 ## Repository Purpose
 
@@ -150,16 +150,18 @@ Yellow Accent: #F4C430      /* Keep from logo for highlights */
 - Includes low-hanging fruit features
 - Includes training and documentation
 
-**Annual Running Costs**: £4,000 - £8,500
+**Annual Running Costs**: £960/year (£80/month)
+- Managed hosting on private server (GDPR compliant)
+- All maintenance, support, security updates included
+- Minimum 2-year commitment from launch
+- After 2 years: £500 termination fee for documentation & codebase handover
 
-**Timeline**: 24 weeks
-- Weeks 1-2: Discovery & Planning
-- Weeks 3-6: Design & Branding
-- Weeks 7-14: Core Development
-- Weeks 15-18: Integrations
-- Weeks 19-20: Content & SEO
-- Weeks 21-23: Testing & Training
-- Week 24: Launch
+**Timeline**: ~12 weeks (Complete by mid-February 2026)
+- Weeks 1-2: Discovery & Planning (including GDPR mapping)
+- Weeks 3-5: Design & Branding
+- Weeks 6-10: Core Development & Compliance (concurrent: features + GDPR + security)
+- Weeks 11-12: Testing, Training & Launch
+- Feb-May: Post-launch warranty/buffer period
 
 ## Building the Demo
 

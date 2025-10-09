@@ -114,10 +114,16 @@ Win the Norfolk FYFC website tender by building a compelling demo that shows you
 - Includes low-hanging fruit features
 - Includes training and documentation
 
-**Annual Running Costs**: £4,000 - £8,500
-- Hosting, maintenance, support
+**Annual Running Costs**: £960/year (£80/month)
+- Managed hosting on private server (GDPR compliant)
+- All maintenance, support, security updates included
+- Minimum 2-year commitment from launch
+- After 2 years: £500 termination fee for documentation & codebase handover
 
-**Timeline**: 24 weeks (Nov 21, 2025 → May 31, 2026)
+**Timeline**: ~12 weeks actual work (Nov 21, 2025 → Mid-February 2026)
+- Complete project delivery: Mid-February 2026
+- May 31st is contractual end date with warranty/buffer period
+- Note: Whilst website appears "done" quickly, substantial GDPR/compliance/legal work happens throughout
 
 ---
 
@@ -381,29 +387,42 @@ Before presenting, ensure:
 
 ## 📅 Project Timeline After Demo Approval
 
+**Important Note**: Complete project delivery by mid-February 2026 (~12 weeks). Whilst the website will appear "done" on the surface relatively quickly, substantial technical work (GDPR compliance, security hardening, accessibility certification, legal requirements) happens concurrently throughout the build. The May 31st contractual date provides warranty/buffer period.
+
 ### Week 0: Kickoff (Nov 21, 2025)
 - Requirements finalization
 - Silo API documentation review
 - Office 365 credentials received
 - Content strategy session
+- GDPR requirements mapping
 
-### Weeks 1-8: Foundation
-- CMS setup
+### Weeks 1-2: Planning & Design
 - Design system
-- Core page builds
-- Content migration begins
+- Component library
+- Legal/compliance framework setup
+- Initial page wireframes
 
-### Weeks 9-16: Integration
+### Weeks 3-8: Core Development (Concurrent Workstreams)
+**Features**: CMS setup, core pages, e-commerce, map, events, integrations
+**Compliance**: GDPR implementation, cookie consent, data protection, accessibility features
+**Security**: Hardening, encryption, secure authentication
+
+### Weeks 9-12: Integration, Testing & Launch
 - Stripe production setup
 - Office 365 complete integration
 - Silo connection (based on API docs)
-- SharePoint linking
-
-### Weeks 17-24: Polish & Launch
-- Content completion
-- Full testing
+- Content migration
+- Full QA testing
+- Security testing
+- Accessibility audit
 - Staff training
-- Launch (May 31, 2026)
+- **Launch mid-February 2026**
+
+### Feb 14 - May 31: Post-Launch Warranty Period
+- Bug fixes
+- Adjustments
+- Performance monitoring
+- Support handover
 
 ---
 
@@ -455,9 +474,12 @@ Everything you need is in this folder:
 - Build: `00-DEMO-PROJECT-README.md`
 - Analysis: `21-RFQ-ALIGNMENT-ANALYSIS.md`
 
-**Budget**: £40-65K development + £4-8.5K/year running
+**Budget**: £40-65K development + £960/year managed hosting
 
-**Timeline**: 24 weeks (Nov 21, 2025 → May 31, 2026)
+**Timeline**: ~12 weeks actual work (Mid-February 2026 delivery)
+- Contractual period: Nov 21, 2025 → May 31, 2026
+- Actual completion: Mid-February 2026
+- Post-launch: Warranty/buffer period through May
 
 **Demo**: 3-5 days to build working prototype
 
