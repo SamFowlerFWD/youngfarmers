@@ -46,11 +46,11 @@ export default function TLDRPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg p-6 border-2 border-green-200">
                 <PoundSterling className="h-8 w-8 text-green-600 mb-2" />
-                <h3 className="font-bold text-2xl text-green-900 mb-1">£2,955</h3>
+                <h3 className="font-bold text-2xl text-green-900 mb-1">£2,455</h3>
                 <p className="text-sm text-gray-600 mb-2">Total Year 1 (all-inclusive)</p>
                 <div className="text-xs text-gray-600 space-y-1">
-                  <p>£600 deposit (30%)</p>
-                  <p>£1,395 on completion (70%)</p>
+                  <p>£449 deposit (30%)</p>
+                  <p>£1,046 on completion (70%)</p>
                   <p>£960/year hosting thereafter</p>
                   <p className="text-green-600 font-semibold pt-1">✨ AI-optimised</p>
                 </div>

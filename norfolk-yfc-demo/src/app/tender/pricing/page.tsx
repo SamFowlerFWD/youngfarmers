@@ -85,8 +85,11 @@ export default function PricingProposalPage() {
                         <p className="text-xs text-green-600 mt-1 font-semibold">
                           ✨ AI-optimised build process - savings passed to client
                         </p>
+                        <p className="text-xs text-purple-600 mt-1 font-semibold">
+                          🎯 Strategic YFC network pricing - foot in the door to help more federations
+                        </p>
                       </td>
-                      <td className="p-4 text-right font-semibold">£1,995</td>
+                      <td className="p-4 text-right font-semibold">£1,495</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
                       <td className="p-4">
@@ -101,7 +104,7 @@ export default function PricingProposalPage() {
                   <tfoot className="bg-primary text-white">
                     <tr>
                       <td className="p-4 font-bold text-lg">FIRST YEAR TOTAL (all-inclusive)</td>
-                      <td className="p-4 text-right font-bold text-2xl">£2,955</td>
+                      <td className="p-4 text-right font-bold text-2xl">£2,455</td>
                     </tr>
                     <tr className="bg-primary/90">
                       <td className="p-4 font-semibold">Annual Running Costs (Year 2 onwards)</td>
@@ -121,7 +124,7 @@ export default function PricingProposalPage() {
                   <div className="space-y-2 text-sm text-blue-800">
                     <div className="flex justify-between">
                       <span>Production (one-time):</span>
-                      <span className="font-semibold">£1,995</span>
+                      <span className="font-semibold">£1,495</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Hosting + Management (12 months @ £80/mo):</span>
@@ -129,16 +132,16 @@ export default function PricingProposalPage() {
                     </div>
                     <div className="border-t border-blue-300 pt-2 mt-2 flex justify-between font-bold text-lg">
                       <span>Total Year 1:</span>
-                      <span>£2,955</span>
+                      <span>£2,455</span>
                     </div>
                     <p className="text-xs mt-2 text-blue-700">
                       ✓ No VAT to add • ✓ No hidden fees • ✓ All-inclusive pricing
                     </p>
                     <p className="text-xs mt-2 text-green-700 font-semibold">
-                      ✨ AI-optimised development - £500+ saving passed to you
+                      ✨ AI-optimised development + YFC network strategy - £1,000+ saving passed to you
                     </p>
                     <p className="text-xs mt-2 text-blue-800 font-semibold">
-                      Payment: £600 deposit (30%) + £1,395 on completion (70%)
+                      Payment: £449 deposit (30%) + £1,046 on completion (70%)
                     </p>
                   </div>
                 </div>
@@ -257,7 +260,7 @@ export default function PricingProposalPage() {
         {/* What's Included */}
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle className="text-2xl">What's Included in Production (£1,995)</CardTitle>
+            <CardTitle className="text-2xl">What's Included in Production (£1,495)</CardTitle>
             <CardDescription>Comprehensive website build with all core requirements</CardDescription>
           </CardHeader>
           <CardContent>
@@ -537,12 +540,12 @@ export default function PricingProposalPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
                   <p className="text-sm text-blue-700 mb-1">Upon Contract Signing</p>
-                  <p className="text-2xl font-bold text-blue-900">£600</p>
+                  <p className="text-2xl font-bold text-blue-900">£449</p>
                   <p className="text-xs text-blue-600 mt-1">(30% deposit)</p>
                 </div>
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
                   <p className="text-sm text-green-700 mb-1">Upon Completion</p>
-                  <p className="text-2xl font-bold text-green-900">£1,395</p>
+                  <p className="text-2xl font-bold text-green-900">£1,046</p>
                   <p className="text-xs text-green-600 mt-1">(70% balance)</p>
                 </div>
                 <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
@@ -1022,6 +1025,59 @@ export default function PricingProposalPage() {
                       organisations and agricultural sector
                     </p>
                   </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-6 border-2 border-purple-300">
+                <h4 className="font-semibold text-lg mb-3 text-purple-900 flex items-center gap-2">
+                  <Target className="h-5 w-5" />
+                  Strategic YFC Network Pricing
+                </h4>
+                <p className="text-sm text-purple-800 mb-4">
+                  This £1,495 price point is deliberately positioned as my <strong>"foot in the door"</strong> strategy
+                  to help more county YFC federations modernise their digital presence:
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-purple-800">
+                  <div className="flex items-start gap-2">
+                    <Zap className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                    <p>
+                      <strong>Target Market:</strong> Many county federations have substandard or outdated websites.
+                      This competitive pricing makes professional web solutions accessible to organisations that
+                      previously couldn't afford quality development.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Zap className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                    <p>
+                      <strong>Network Effect:</strong> Norfolk YFC becomes a showcase that demonstrates capability
+                      to other federations. Success here opens doors to 50+ county YFC organisations nationwide
+                      plus regional agricultural bodies.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Zap className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                    <p>
+                      <strong>Volume Strategy:</strong> Lower pricing on initial projects builds the portfolio and
+                      reputation. Referral programme (25% to Norfolk YFC) incentivises you to connect me with other
+                      federations, creating passive income for you.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Zap className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                    <p>
+                      <strong>Long-Term Value:</strong> Ongoing hosting/support (£960/year) and future feature
+                      development provide sustainable recurring revenue. Multiple small clients beats one large client
+                      for business stability.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 p-4 bg-purple-100 rounded border border-purple-300">
+                  <p className="text-xs text-purple-900">
+                    <strong>Why this benefits Norfolk YFC:</strong> You get premium quality at accessible pricing,
+                    plus earn commission (£623.75 per county federation referred). You're not subsidising my business -
+                    you're helping me access a market I believe needs better digital solutions. Your success story
+                    becomes my marketing, and you profit from the referrals.
+                  </p>
                 </div>
               </div>
 
