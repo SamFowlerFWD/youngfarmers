@@ -1185,12 +1185,6 @@ export default function PricingProposalPage() {
                         <span className="font-bold">£1,995.00</span>
                       </div>
                     </div>
-                    <div className="mt-4 p-3 bg-purple-100 rounded border border-purple-300">
-                      <p className="text-xs text-purple-900">
-                        <strong>Plus ongoing:</strong> £80/month hosting generates long-term passive income for Norfolk YFC
-                        if organisations want to add hosting commission arrangements
-                      </p>
-                    </div>
                   </div>
 
                   <div className="bg-white rounded-lg p-4 border border-gray-200">
@@ -1368,7 +1362,6 @@ export default function PricingProposalPage() {
                       <li>• Applies to county YFC federations nationwide</li>
                       <li>• Applies to similar membership organisations</li>
                       <li>• Can be structured as Norfolk YFC acts as reseller/partner</li>
-                      <li>• Optional ongoing hosting commission available</li>
                     </ul>
                   </div>
                   <div>
@@ -1399,10 +1392,10 @@ export default function PricingProposalPage() {
                   <div className="bg-white rounded-lg p-4">
                     <h4 className="font-semibold text-green-900 mb-2">For Norfolk YFC:</h4>
                     <ul className="space-y-1 text-xs text-gray-700">
-                      <li>✓ Generate passive income from regional referrals</li>
+                      <li>✓ Generate passive income from regional and member referrals</li>
                       <li>✓ Help other county federations improve their digital presence</li>
                       <li>✓ Strengthen relationships within YFC network</li>
-                      <li>✓ Potential ongoing hosting commissions</li>
+                      <li>✓ Support local agricultural businesses and community</li>
                     </ul>
                   </div>
                   <div className="bg-white rounded-lg p-4">
