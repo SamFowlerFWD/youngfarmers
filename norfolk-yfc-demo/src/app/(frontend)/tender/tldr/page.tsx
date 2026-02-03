@@ -297,14 +297,6 @@ export default function TLDRPage() {
                 <p className="text-gray-600 text-xs">User accounts, profiles, member-only content</p>
               </div>
 
-              <div className="bg-teal-50 rounded-lg p-4 border border-teal-200">
-                <div className="flex justify-between items-start mb-2">
-                  <h4 className="font-semibold">Silo Database Integration</h4>
-                  <Badge className="bg-teal-600">£0-1,000</Badge>
-                </div>
-                <p className="text-gray-600 text-xs">Simple portal (free) to full API sync</p>
-              </div>
-
               <div className="bg-indigo-50 rounded-lg p-4 border border-indigo-200">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="font-semibold">Native Mobile App</h4>
@@ -326,8 +318,8 @@ export default function TLDRPage() {
                 <p className="text-amber-800">Network of backup developers ready to step in. Your project continues.</p>
               </div>
               <div>
-                <p className="font-semibold mb-1">If Silo API Is Problematic</p>
-                <p className="text-amber-800">Start with simple portal link (free), upgrade later when API is better understood.</p>
+                <p className="font-semibold mb-1">If Third-Party API Needed Later</p>
+                <p className="text-amber-800">Architecture is API-ready. External integrations can be added when documentation is available.</p>
               </div>
               <div>
                 <p className="font-semibold mb-1">If Timeline Slips</p>

@@ -88,7 +88,7 @@ export default function MembershipPage() {
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
-            <Link href="#join">Join Now</Link>
+            <Link href="/join">Join Now</Link>
           </Button>
           <Button size="lg" variant="outline" asChild className="border-white text-gray-900 hover:bg-white/10">
             <Link href="/clubs">Find Your Club</Link>
@@ -390,7 +390,7 @@ export default function MembershipPage() {
                   className="w-full mt-6 bg-primary hover:bg-primary/90"
                   asChild
                 >
-                  <Link href="#join">
+                  <Link href="/join">
                     Join as Junior Member
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </Link>
@@ -478,7 +478,7 @@ export default function MembershipPage() {
                   className="w-full mt-6 bg-primary hover:bg-primary/90"
                   asChild
                 >
-                  <Link href="#join">
+                  <Link href="/join">
                     Join as Senior Member
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </Link>
@@ -548,7 +548,7 @@ export default function MembershipPage() {
                 Under 18s will need parent/guardian consent.
               </p>
               <Button variant="outline" asChild>
-                <Link href="/shop/junior-membership-2025-26">
+                <Link href="/join">
                   Join Online
                 </Link>
               </Button>
@@ -718,7 +718,7 @@ export default function MembershipPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90">
-                <Link href="/shop/junior-membership-2025-26">
+                <Link href="/join">
                   Join Now
                 </Link>
               </Button>

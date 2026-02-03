@@ -6,9 +6,12 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed": "node --env-file=.env.local --import tsx src/seed.ts",
+    "payload:generate-types": "payload generate:types"
   },
   "dependencies": {
+    "@azure/msal-node": "^5.0.3",
     "@hookform/resolvers": "^5.2.2",
     "@payloadcms/db-postgres": "^3.59.1",
     "@payloadcms/next": "^3.59.1",
@@ -35,6 +38,7 @@
     "react-dom": "19.1.0",
     "react-hook-form": "^7.64.0",
     "react-map-gl": "^8.1.0",
+    "sharp": "^0.34.5",
     "stripe": "^19.1.0",
     "tailwind-merge": "^3.3.1",
     "zod": "^4.1.12"

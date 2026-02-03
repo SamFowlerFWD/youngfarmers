@@ -241,11 +241,11 @@ export default function CMSPage() {
             <div className="pt-4 mt-4 border-t border-gray-200">
               <button
                 onClick={() => {
-                  setActiveTab("silo");
+                  setActiveTab("database");
                   setMobileMenuOpen(false);
                 }}
                 className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  activeTab === "silo"
+                  activeTab === "database"
                     ? "bg-primary text-white"
                     : "text-gray-700 hover:bg-gray-100"
                 }`}
@@ -307,7 +307,7 @@ export default function CMSPage() {
           {activeTab === "jobs" && <JobsView />}
           {activeTab === "pages" && <PagesView />}
           {activeTab === "media" && <MediaView />}
-          {activeTab === "silo" && <SiloIntegrationView />}
+          {activeTab === "database" && <MemberDatabaseView />}
           {activeTab === "analytics" && <AnalyticsView />}
           {activeTab === "settings" && <SettingsView />}
         </main>
@@ -979,263 +979,90 @@ function AnalyticsView() {
   );
 }
 
-// Silo Integration View
-function SiloIntegrationView() {
+// Member Database View
+function MemberDatabaseView() {
   return (
     <div className="space-y-4 sm:space-y-6">
       <div>
-        <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Member Database Integration</h2>
-        <p className="text-xs sm:text-base text-gray-600">Silo API Integration Strategy & Capabilities</p>
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Member Database</h2>
+        <p className="text-xs sm:text-base text-gray-600">Built-in CRM & API Integration Capabilities</p>
       </div>
 
-      {/* Integration Status */}
-      <Alert className="bg-blue-50 border-blue-200">
-        <AlertCircle className="h-4 w-4 text-blue-600" />
-        <AlertDescription className="text-blue-800">
-          <strong>API Integration Pending:</strong> Full integration capabilities depend on Silo API documentation and access credentials.
-          This page outlines the proposed integration approach and potential features once API access is provided.
+      <Alert className="bg-green-50 border-green-200">
+        <CheckCircle2 className="h-4 w-4 text-green-600" />
+        <AlertDescription className="text-green-800">
+          <strong>Built-in CRM Active:</strong> Full member management is handled directly within the website. Member records, club assignments, payment tracking, and reporting are all managed through the integrated CRM system.
         </AlertDescription>
       </Alert>
 
-      {/* Integration Approach */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Database className="h-5 w-5" />
-            Integration Approach
+            What&apos;s Included
           </CardTitle>
-          <CardDescription>Proposed architecture for Norfolk YFC member database sync</CardDescription>
+          <CardDescription>Comprehensive member management built into the platform</CardDescription>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-              <div className="flex items-center justify-between mb-2">
-                <h4 className="font-semibold text-sm flex items-center gap-2">
-                  <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">Option 1</span>
-                  Simple Portal
-                </h4>
-                <Badge className="bg-green-600">Included</Badge>
+        <CardContent>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-medium text-sm">Full Member CRM</p>
+                <p className="text-xs text-gray-600">Member records with personal details, parent/guardian info, emergency contacts, medical notes</p>
               </div>
-              <p className="text-sm text-gray-700 mb-3">
-                Direct link/iframe to existing Silo member portal. Minimal technical integration, quick implementation.
-              </p>
-              <div className="bg-white rounded p-2 text-xs text-gray-600 border border-blue-200">
-                <p className="font-semibold text-blue-900 mb-1">✓ Instantly Accessible</p>
-                <p>No additional development cost. Can be implemented immediately with Silo portal URL.</p>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-medium text-sm">Club-Scoped Dashboards</p>
+                <p className="text-xs text-gray-600">Club leaders see only their members. County admins see everything.</p>
               </div>
-            </div>
-
-            <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
-              <div className="flex items-center justify-between mb-2">
-                <h4 className="font-semibold text-sm flex items-center gap-2">
-                  <span className="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Option 2</span>
-                  Read-Only Sync
-                </h4>
-                <Badge className="bg-green-700">£250-500</Badge>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-medium text-sm">Online Membership Signup</p>
+                <p className="text-xs text-gray-600">Parents sign up children, pay via Stripe, membership auto-activated</p>
               </div>
-              <p className="text-sm text-gray-700 mb-3">
-                Display member data on website (directory, stats). Data flows one-way from Silo to website via scheduled sync.
-              </p>
-              <div className="bg-white rounded p-2 text-xs text-gray-600 border border-green-200">
-                <p className="font-semibold text-green-900 mb-1">Requirements:</p>
-                <p>• Silo API documentation</p>
-                <p>• Read-only API access</p>
-                <p>• Data field mapping specification</p>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-medium text-sm">SharePoint Sync</p>
+                <p className="text-xs text-gray-600">Bi-directional sync with Office 365 SharePoint lists for data backup and cross-platform access</p>
               </div>
-            </div>
-
-            <div className="bg-purple-50 border-2 border-purple-200 rounded-lg p-4">
-              <div className="flex items-center justify-between mb-2">
-                <h4 className="font-semibold text-sm flex items-center gap-2">
-                  <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Option 3</span>
-                  Bidirectional API
-                </h4>
-                <Badge className="bg-purple-700">£600-1,000</Badge>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-medium text-sm">Payment Tracking</p>
+                <p className="text-xs text-gray-600">Stripe Connect with per-club payment routing and county platform fee management</p>
               </div>
-              <p className="text-sm text-gray-700 mb-3">
-                Full two-way sync. Website registrations auto-update Silo. Complex but most integrated experience.
-              </p>
-              <div className="bg-white rounded p-2 text-xs text-gray-600 border border-purple-200">
-                <p className="font-semibold text-purple-900 mb-1">⚠️ Cannot Price Accurately</p>
-                <p>Final cost depends on API complexity. Quote provided after reviewing Silo API documentation.</p>
-              </div>
-            </div>
-          </div>
-
-          <Alert className="bg-amber-50 border-amber-200">
-            <Info className="h-4 w-4 text-amber-600" />
-            <AlertDescription className="text-sm text-amber-900">
-              <strong>Recommendation:</strong> Start with Option 1 (included) for immediate functionality.
-              Options 2 & 3 can be added later once we have Silo API documentation and can provide accurate implementation quotes.
-            </AlertDescription>
-          </Alert>
+            </li>
+          </ul>
         </CardContent>
       </Card>
 
-      {/* Potential Features Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Data Display Features */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">Data Display Features</CardTitle>
-            <CardDescription>What could be shown on the website from Silo</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-medium text-sm">Member Directory</p>
-                  <p className="text-xs text-gray-600">Public profiles with photos, clubs, interests (privacy-controlled)</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-medium text-sm">Membership Statistics</p>
-                  <p className="text-xs text-gray-600">Total members, club breakdown, age demographics, growth trends</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-medium text-sm">Club Membership Counts</p>
-                  <p className="text-xs text-gray-600">Real-time member counts per club on interactive map</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-medium text-sm">Member Achievements</p>
-                  <p className="text-xs text-gray-600">Competition wins, certificates, leadership roles</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-medium text-sm">Attendance Tracking</p>
-                  <p className="text-xs text-gray-600">Event check-ins, club meeting participation</p>
-                </div>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        {/* Integration Features */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">Integration Features</CardTitle>
-            <CardDescription>Actions that could sync back to Silo</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <Link2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-medium text-sm">New Member Registration</p>
-                  <p className="text-xs text-gray-600">Website signups automatically create Silo member records</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Link2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-medium text-sm">Event Registrations</p>
-                  <p className="text-xs text-gray-600">Event bookings sync to Silo attendance records</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Link2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-medium text-sm">Membership Renewals</p>
-                  <p className="text-xs text-gray-600">Online payments update Silo membership status and expiry dates</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Link2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-medium text-sm">Profile Updates</p>
-                  <p className="text-xs text-gray-600">Members update contact details, preferences on website → syncs to Silo</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Link2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-medium text-sm">Shop Purchases</p>
-                  <p className="text-xs text-gray-600">Link merchandise sales to member accounts</p>
-                </div>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Technical Requirements */}
       <Card>
         <CardHeader>
-          <CardTitle>Technical Requirements for Integration</CardTitle>
-          <CardDescription>Information needed from Norfolk YFC to proceed</CardDescription>
+          <CardTitle className="flex items-center gap-2">
+            <Link2 className="h-5 w-5" />
+            Third-Party API Integration
+          </CardTitle>
+          <CardDescription>Future-ready for external system connections</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="bg-gray-50 rounded-lg p-6 space-y-4">
-            <div>
-              <h4 className="font-semibold text-sm mb-2">Required from Silo/Norfolk YFC:</h4>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>• <strong>API Documentation:</strong> Available endpoints, request/response formats, authentication methods</li>
-                <li>• <strong>API Credentials:</strong> API keys, OAuth tokens, or other authentication credentials</li>
-                <li>• <strong>Data Schema:</strong> Structure of member data, available fields, data types</li>
-                <li>• <strong>Rate Limits:</strong> API call limits, recommended sync frequencies</li>
-                <li>• <strong>Webhook Support:</strong> Does Silo support webhooks for real-time updates?</li>
-                <li>• <strong>Privacy & Permissions:</strong> What data can be publicly displayed? Member consent requirements?</li>
-                <li>• <strong>Test Environment:</strong> Sandbox API for development and testing</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-sm mb-2">Fallback Approach (if API unavailable):</h4>
-              <p className="text-sm text-gray-600">
-                If Silo API is limited or unavailable, we can implement a simple member portal link, manual CSV import/export,
-                or duplicate member management within this CMS until API access is established.
-              </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Implementation Timeline */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Estimated Implementation Timeline</CardTitle>
-          <CardDescription>Once API documentation and credentials are provided</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            <div className="flex items-start gap-4">
-              <div className="bg-blue-100 text-blue-700 px-3 py-1 rounded font-semibold text-sm">Week 1-2</div>
-              <div>
-                <p className="font-medium text-sm">API Discovery & Testing</p>
-                <p className="text-xs text-gray-600">Review documentation, test endpoints, verify data schema</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="bg-blue-100 text-blue-700 px-3 py-1 rounded font-semibold text-sm">Week 3-4</div>
-              <div>
-                <p className="font-medium text-sm">Core Integration Build</p>
-                <p className="text-xs text-gray-600">Implement authentication, data sync logic, error handling</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="bg-blue-100 text-blue-700 px-3 py-1 rounded font-semibold text-sm">Week 5-6</div>
-              <div>
-                <p className="font-medium text-sm">UI Development & Testing</p>
-                <p className="text-xs text-gray-600">Build member directory, admin interface, conduct testing with real data</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="bg-green-100 text-green-700 px-3 py-1 rounded font-semibold text-sm">Week 7</div>
-              <div>
-                <p className="font-medium text-sm">Launch & Monitoring</p>
-                <p className="text-xs text-gray-600">Deploy to production, monitor sync performance, train staff</p>
-              </div>
-            </div>
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <p className="text-sm text-blue-900 mb-3">
+              The platform architecture supports third-party API integrations. If an external member database or other system API becomes available in future, integration can be scoped and added at that point.
+            </p>
+            <ul className="space-y-1 text-sm text-blue-800">
+              <li>• API-ready architecture with proven sync engine (SharePoint integration demonstrates this)</li>
+              <li>• Bi-directional data sync with conflict resolution already built</li>
+              <li>• Rate limiting and error handling infrastructure in place</li>
+              <li>• Integration can be quoted accurately once API documentation is available</li>
+            </ul>
           </div>
         </CardContent>
       </Card>

@@ -129,16 +129,16 @@ export default function RequirementsMatrixPage() {
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="p-3">
-                      <span className="font-medium">Silo database integration</span>
+                      <span className="font-medium">Member database integration</span>
                     </td>
                     <td className="p-3">
-                      Flexible approach: portal link, read-only sync, or bidirectional API (see strategy doc)
+                      Built-in CRM with full member management. Third-party API integration can be added when available.
                     </td>
                     <td className="p-3 text-blue-600">
                       <a href="/cms" className="hover:underline">See /cms → Member Database</a>
                     </td>
                     <td className="p-3 text-center">
-                      <Badge className="bg-orange-100 text-orange-800">Needs API docs</Badge>
+                      <Badge className="bg-green-100 text-green-800">CRM Built</Badge>
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">

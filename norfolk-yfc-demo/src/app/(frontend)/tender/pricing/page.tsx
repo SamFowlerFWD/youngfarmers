@@ -343,9 +343,9 @@ export default function PricingProposalPage() {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold">Member Database Strategy</p>
+                    <p className="font-semibold">Member Database</p>
                     <p className="text-sm text-gray-600">
-                      Silo integration approach (pending API documentation)
+                      Built-in CRM with full member management. Third-party API integration can be added when available.
                     </p>
                   </div>
                 </div>
@@ -692,7 +692,7 @@ export default function PricingProposalPage() {
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
                       <p>
-                        <strong>Silo Integration:</strong> See "Silo Member Database Integration" section below for pricing options (£0-1,000)
+                        <strong>API Integration:</strong> Architecture supports third-party database connections when API documentation becomes available
                       </p>
                     </div>
                   </div>
@@ -712,86 +712,27 @@ export default function PricingProposalPage() {
                 </div>
               </div>
 
-              {/* Silo Database Integration */}
+              {/* Third-Party API Integration */}
               <div className="bg-white rounded-lg p-6 border-2 border-teal-200">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="font-bold text-lg text-teal-900 mb-2">Silo Member Database Integration</h3>
+                    <h3 className="font-bold text-lg text-teal-900 mb-2">Third-Party API Integration</h3>
                     <p className="text-sm text-gray-600 mb-3">
-                      Connect your existing Silo member database to the website for seamless member data management
+                      The platform includes a full built-in CRM for member management. If a third-party member database API becomes available in future, integration can be added at that point.
                     </p>
                   </div>
-                  <Badge className="bg-teal-100 text-teal-800 text-lg px-4 py-2">From £0</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-lg px-4 py-2">When needed</Badge>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                  <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-semibold text-sm">Option 1: Simple Portal</h4>
-                      <Badge className="bg-green-600 text-white text-xs">Included</Badge>
-                    </div>
-                    <p className="text-xs text-gray-700 mb-2">
-                      Direct link/iframe to existing Silo member portal
-                    </p>
-                    <div className="bg-white rounded p-2 text-xs text-gray-600 border border-blue-200">
-                      <p className="font-semibold text-blue-900">✓ Instantly Accessible</p>
-                      <p className="mt-1">No additional development cost</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-semibold text-sm">Option 2: Read-Only Sync</h4>
-                      <Badge className="bg-green-700 text-white text-xs">£250-500</Badge>
-                    </div>
-                    <p className="text-xs text-gray-700 mb-2">
-                      Display member data on website via one-way sync
-                    </p>
-                    <div className="bg-white rounded p-2 text-xs text-gray-600 border border-green-200">
-                      <p className="font-semibold text-green-900">Requirements:</p>
-                      <p className="mt-1">• Silo API docs</p>
-                      <p>• Read-only access</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-purple-50 border-2 border-purple-200 rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-semibold text-sm">Option 3: Bidirectional API</h4>
-                      <Badge className="bg-purple-700 text-white text-xs">£600-1,000</Badge>
-                    </div>
-                    <p className="text-xs text-gray-700 mb-2">
-                      Full two-way sync with automatic updates
-                    </p>
-                    <div className="bg-white rounded p-2 text-xs text-gray-600 border border-purple-200">
-                      <p className="font-semibold text-purple-900">⚠️ Pricing Note:</p>
-                      <p className="mt-1">Quote after API review</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-sm text-amber-900 mb-2">
-                    📋 What We Need to Provide Accurate Pricing
-                  </h4>
-                  <div className="space-y-1 text-sm text-amber-800">
-                    <p>• <strong>Silo API Documentation</strong> - Technical specifications and endpoints</p>
-                    <p>• <strong>API Access Credentials</strong> - Test environment access for development</p>
-                    <p>• <strong>Data Field Mapping</strong> - Which member fields to sync and display</p>
-                    <p className="text-xs italic mt-2">
-                      Note: Cannot price Options 2 & 3 accurately without reviewing Silo's API complexity and limitations
-                    </p>
-                  </div>
-                </div>
-
-                <div className="bg-teal-50 border border-teal-200 rounded-lg p-4 mt-4">
+                <div className="bg-teal-50 border border-teal-200 rounded-lg p-4">
                   <p className="text-sm text-teal-900 mb-2">
-                    <strong>Recommendation:</strong> Start with Option 1 (included) for immediate functionality
+                    <strong>Architecture is API-ready:</strong>
                   </p>
                   <ul className="space-y-1 text-sm text-teal-800">
-                    <li>• No additional cost or development time</li>
-                    <li>• Members can access Silo portal directly from website</li>
-                    <li>• Can upgrade to Options 2 or 3 later once API documentation is available</li>
-                    <li>• Provides value immediately while avoiding rushed integration decisions</li>
+                    <li>• Built-in CRM handles all member data out of the box</li>
+                    <li>• SharePoint bi-directional sync already built in</li>
+                    <li>• Additional third-party API connections can be scoped and quoted when documentation is available</li>
+                    <li>• No upfront cost for integration that may not be needed</li>
                   </ul>
                 </div>
               </div>
@@ -802,7 +743,7 @@ export default function PricingProposalPage() {
                   <div>
                     <h3 className="font-bold text-lg text-indigo-900 mb-2">Native Mobile App (iOS & Android)</h3>
                     <p className="text-sm text-gray-600 mb-3">
-                      Full native mobile application for iOS and Android with API integration to both Silo database and website database
+                      Full native mobile application for iOS and Android with API integration to the website database
                     </p>
                   </div>
                   <Badge className="bg-indigo-100 text-indigo-800 text-lg px-4 py-2">£3,500</Badge>
@@ -835,12 +776,11 @@ export default function PricingProposalPage() {
                     <h4 className="font-semibold text-sm mb-2">Database Integration:</h4>
                     <ul className="space-y-1 text-sm text-gray-700">
                       <li>🔗 API integration to website database</li>
-                      <li>🔗 API integration to Silo member database</li>
-                      <li>🔄 Real-time sync between systems</li>
-                      <li>📊 Access member data from both sources</li>
+                      <li>🔄 Real-time sync with website database</li>
+                      <li>📊 Full access to member data</li>
                       <li>🎫 Event bookings sync across platforms</li>
                       <li>🛒 Shop orders accessible in app</li>
-                      <li>👤 Member profiles from Silo data</li>
+                      <li>👤 Member profiles and CRM data</li>
                       <li>📈 Competition entries and results</li>
                     </ul>
                   </div>
@@ -870,7 +810,7 @@ export default function PricingProposalPage() {
                     <div className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0" />
                       <p>
-                        <strong>Concurrent Database Access:</strong> Pulls data from both website and Silo simultaneously
+                        <strong>Database Access:</strong> Full access to website CRM and member data
                       </p>
                     </div>
                   </div>
@@ -882,13 +822,13 @@ export default function PricingProposalPage() {
                   </p>
                   <ul className="space-y-1 text-sm text-green-800">
                     <li>• Professional presence alongside major national organisations</li>
-                    <li>• Real-time access to Silo member data within the app</li>
+                    <li>• Real-time access to member data within the app</li>
                     <li>• Seamless experience between website and mobile app</li>
                     <li>• Enhanced member engagement through native app experience</li>
                     <li>• Future-ready for expanding digital services</li>
                   </ul>
                   <p className="text-xs text-green-700 mt-3 italic">
-                    Note: Requires Silo API documentation and access credentials
+                    Note: Third-party API integration can be added when documentation is available
                   </p>
                 </div>
               </div>
@@ -935,7 +875,7 @@ export default function PricingProposalPage() {
                   <p className="text-sm text-gray-800 mb-3">
                     <strong>Complete digital ecosystem:</strong> Member login system, PWA for easy installation,
                     plus full native apps on both iOS and Android. All systems connected to both your website database
-                    and Silo member database for unified member experience.
+                    for a unified member experience.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-gray-700">
                     <div className="bg-blue-50 p-2 rounded">
